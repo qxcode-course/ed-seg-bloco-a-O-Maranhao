@@ -20,10 +20,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@main-quest
-- ed@revisão
 - sandbox@student_sandbox_alias:00_rascunhos
 - sandbox@student_sandbox_alias
+- ed@main-quest
+- ed@revisão
 tasks: {}
 flags:
   painel: 0
@@ -33,4 +33,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: ed@https://github.com/qxcodefup/arcade/blob/master/base/fuga/README.md
+selected: sandbox@user_001

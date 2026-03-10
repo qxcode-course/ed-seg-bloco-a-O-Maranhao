@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-10_16-17-05",
+            "content": "@@ -1,409 +0,0 @@\n-def fuga():%0A    h=int(input(%22Posi%C3%A7%C3%A3o do Helic%C3%B3ptero:%22))%0A    p=int(input(%22Posi%C3%A7%C3%A3o do Policial:%22))%0A    f=int(input(%22Posi%C3%A7%C3%A3o do Fugitivo:%22))%0A    d=int(input(%22Dire%C3%A7%C3%A3o de Corrida do Fugitivo:%22))%0A%0A    while 1%3E0:%0A        f+=d%0A        if f== '-1':%0A            f=15%0A        if f=='16':%0A            f=0%0A        if f==h:%0A            print(%22S%22)%0A            break%0A        if f==p:%0A            print(%22N%22)%0A            break%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2026-03-10_16-31-21",
+            "content": "@@ -24,59 +24,169 @@\n nput\n-)%0A    p=int(input)%0A    f=int(input)%0A    d=int(input\n+(%22Posi%C3%A7%C3%A3o do Helic%C3%B3ptero:%22))%0A    p=int(input(%22Posi%C3%A7%C3%A3o do Policial:%22))%0A    f=int(input(%22Posi%C3%A7%C3%A3o do Fugitivo:%22))%0A    d=int(input(%22Dire%C3%A7%C3%A3o de Corrida do Fugitivo:%22)\n )%0A%0A \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-10_16-53-57",
+            "content": "def fuga():\n    h=int(input)\n    p=int(input)\n    f=int(input)\n    d=int(input)\n\n    while 1>0:\n        f+=d\n        if f== '-1':\n            f=15\n        if f=='16':\n            f=0\n        if f==h:\n            print(\"S\")\n            break\n        if f==p:\n            print(\"N\")\n            break\n",
+            "lines": "18"
+        }
+    ]
+}
