@@ -20,15 +20,16 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@student_sandbox_alias:00_rascunhos
-- sandbox@student_sandbox_alias
-- ed@main-quest
 - ed@revisão
+- ed@árvore
+- ed@main-quest
+- sandbox@student_sandbox_alias
+- sandbox@student_sandbox_alias:00_rascunhos
 tasks: {}
 flags:
   painel: 0
   quests: 0
-  tracks: 0
+  tracks: 1
   tasks: 0
   task_graph_mode: 0
   show_time: 0
