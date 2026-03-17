@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-10-48",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,597 +37,32 @@\n ) %7B%0A\n-%09qtd_album := 0%0A%09qtd_fig := 0%0A%09fmt.Scan(&qtd_album, &qtd_fig)%0A%09album := make(%5B%5Dint, qtd_fig) //criei um vetor que %C3%A9 o tamanho das figurinhas q cada album tem%0A%09unicos := make(map%5Bint%5Dbool)  //criando um mapa%0A%09repetidos := make(%5B%5Dint, 0, qtd_fig)%0A%09for i := range album %7B //for do tamanho do album%0A%09%09fmt.Scan(&album%5Bi%5D)%0A%09%7D%0A%09for _, fig := range album %7B //para cada figurinha no album%0A%09%09if unicos%5Bfig%5D %7B%0A%09%09%09repetidos = append(repetidos, fig) //se meu mapa de unicos j%C3%A1 possui essa figurinha, bota nos repetidos%0A%09%09%7D else %7B%0A%09%09%09unicos%5Bfig%5D = true%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(unicos)%0A%09fmt.Println(repetidos\n+    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_16-23-13",
+            "content": "@@ -587,122 +587,49 @@\n %7D%0A%09f\n-or _, valor := range repetidos %7B%0A%09%09if i != 0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09fmt.Println(%22%25v%22, valor)%0A%09%7D%0A%09fmt.Print(%22%5Cn%22\n+mt.Println(unicos)%0A%09fmt.Println(repetidos\n )%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-17_16-28-05",
+            "content": "@@ -586,17 +586,17 @@\n %09%7D%0A%09for \n-i\n+_\n , valor \n@@ -663,17 +663,18 @@\n mt.Print\n-f\n+ln\n (%22%25v%22, v\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-17_16-28-43",
+            "content": "@@ -685,102 +685,8 @@\n %0A%09%7D%0A\n-%09for i := 1; i %3C= qtd_album; i++ %7B%0A%09%09if !unicos%5Bi%5D %7B%0A%09%09%09fmt.Print(i)%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A\n %09fmt\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-17_16-30-40",
+            "content": "@@ -685,25 +685,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(%22%22)%0A\n %09for\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_16-31-01",
+            "content": "@@ -763,24 +763,17 @@\n mt.Print\n-f(%22%25v%22, \n+(\n i)%0A%09%09%09fm\n@@ -779,17 +779,16 @@\n mt.Print\n-f\n (%22 %22)%0A%09%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_16-32-12",
+            "content": "@@ -752,26 +752,8 @@\n s%5Bi%5D\n- && i != qtd_album\n  %7B%0A%09\n@@ -797,56 +797,8 @@\n  %22)%0A\n-%09%09%7D else if !unicos%5Bi%5D %7B%0A%09%09%09fmt.Printf(%22%25v%22, i)%0A\n %09%09%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_16-33-43",
+            "content": "@@ -848,17 +848,24 @@\n mt.Print\n-(\n+f(%22%25v%22, \n i)%0A%09%09%7D%0A%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-17_16-34-08",
+            "content": "@@ -748,16 +748,34 @@\n nicos%5Bi%5D\n+ && i != qtd_album\n  %7B%0A%09%09%09fm\n@@ -807,24 +807,65 @@\n Printf(%22 %22)%0A\n+%09%09%7D else if !unicos%5Bi%5D %7B%0A%09%09%09fmt.Print(i)%0A\n %09%09%7D%0A%09%7D%0A%09fmt.\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-17_16-34-37",
+            "content": "@@ -585,64 +585,8 @@\n %0A%09%7D%0A\n-%09if len(repetidos) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09\n %09for\n@@ -618,17 +618,16 @@\n dos %7B%0A%09%09\n-%09\n if i != \n@@ -630,17 +630,16 @@\n  != 0 %7B%0A\n-%09\n %09%09%09fmt.P\n@@ -650,20 +650,18 @@\n (%22 %22)%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%09fmt.Pr\n@@ -678,20 +678,16 @@\n  valor)%0A\n-%09%09%7D%0A\n %09%7D%0A%09fmt.\n@@ -701,60 +701,8 @@\n (%22%22)\n- //criar um vetor de saida aqui ou coisa do tipo sla\n %0A%09fo\n@@ -817,11 +817,10 @@\n t(%22%5Cn%22)%0A\n-%0A\n %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_16-39-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_album := 0\n\tqtd_fig := 0\n\tfmt.Scan(&qtd_album, &qtd_fig)\n\talbum := make([]int, qtd_fig) //criei um vetor que \u00e9 o tamanho das figurinhas q cada album tem\n\tunicos := make(map[int]bool)  //criando um mapa\n\trepetidos := make([]int, 0, qtd_fig)\n\tfor i := range album { //for do tamanho do album\n\t\tfmt.Scan(&album[i])\n\t}\n\tfor _, fig := range album { //para cada figurinha no album\n\t\tif unicos[fig] {\n\t\t\trepetidos = append(repetidos, fig) //se meu mapa de unicos j\u00e1 possui essa figurinha, bota nos repetidos\n\t\t} else {\n\t\t\tunicos[fig] = true\n\t\t}\n\t}\n\tif len(repetidos) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, valor := range repetidos {\n\t\t\tif i != 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Printf(\"%v\", valor)\n\t\t}\n\t}\n\tfmt.Println(\"\") //criar um vetor de saida aqui ou coisa do tipo sla\n\tfor i := 1; i <= qtd_album; i++ {\n\t\tif !unicos[i] {\n\t\t\tfmt.Printf(\"%v\", i)\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}\n\tfmt.Print(\"\\n\")\n\n}\n",
+            "lines": "41"
+        }
+    ]
+}

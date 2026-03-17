@@ -1,0 +1,37 @@
+2026-03-17 15:57:33, SELF, v:1, k:sandbox@user_000, self:1, rate:100, study:16
+2026-03-17 15:57:39, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-17 15:57:41, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-17 15:57:59, SELF, v:1, k:sandbox@user_001, self:1, rate:100, study:20
+2026-03-17 15:58:04, MOVE, v:1, k:sandbox@user_002, mode:PICK
+2026-03-17 15:58:06, MOVE, v:1, k:sandbox@user_002, mode:BACK
+2026-03-17 15:58:19, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-17 15:58:21, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-17 15:58:26, MOVE, v:1, k:sandbox@user_000, mode:PICK
+2026-03-17 16:09:54, EXEC, v:1, k:sandbox@user_000, mode:FULL, rate:0, size:24
+2026-03-17 16:10:23, MOVE, v:1, k:sandbox@user_000, mode:BACK
+2026-03-17 16:10:28, MOVE, v:1, k:ed@baruel, mode:DOWN
+2026-03-17 16:10:37, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-17 16:10:48, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:5
+2026-03-17 16:23:07, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-03-17 16:23:13, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:24
+2026-03-17 16:28:00, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-03-17 16:28:05, EXEC, v:1, k:ed@baruel, mode:FULL, size:29, fail:COMP
+2026-03-17 16:28:08, EXEC, v:1, k:ed@baruel, mode:FULL, fail:COMP
+2026-03-17 16:28:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:29
+2026-03-17 16:30:40, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:35
+2026-03-17 16:31:01, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:36
+2026-03-17 16:32:12, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:36
+2026-03-17 16:33:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:38
+2026-03-17 16:34:08, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:38
+2026-03-17 16:34:37, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:36
+2026-03-17 16:39:51, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:41
+2026-03-17 16:40:02, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-17 16:40:05, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-17 16:40:09, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-17 16:43:52, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:20
+2026-03-17 16:45:06, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:24
+2026-03-17 16:45:13, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-17 16:48:28, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:36
+2026-03-17 16:48:38, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:36
+2026-03-17 16:48:47, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-17 16:49:12, SELF, v:1, k:ed@gomos, self:1, rate:100, study:8, guided:1

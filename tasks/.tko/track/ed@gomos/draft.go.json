@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-43-52",
+            "content": "@@ -236,87 +236,8 @@\n bra)\n-%0A%09for i := qtd - 1; i %3E 0; i-- %7B%0A%09%09cobra%5Bi%5D = cobra%5Bi-1%5D%0A%09%7D%0A%09fmt.Println(cobra)\n %0A%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_16-45-06",
+            "content": "@@ -297,200 +297,26 @@\n %09%7D%0A%09\n-switch dir %7B%0A%09case %22L%22:%0A%09%09cobra%5B0%5D.x--%0A%09case %22R%22:%0A%09%09cobra%5B0%5D.x++%0A%09case %22U%22:%0A%09%09cobra%5B0%5D.y--%0A%09case %22D%22:%0A%09%09cobra%5B0%5D.y++%0A%09%7D%0A%09for _, gomo := range cobra %7B%0A%09%09fmt.Printf(%22%25v %25v%5Cn%22, gomo.x, gomo.y)%0A%09%7D\n+fmt.Println(cobra)\n %0A%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-17_16-48-28",
+            "content": "@@ -203,16 +203,45 @@\n %5D.y)%0A%09%7D%0A\n+%09fmt.Println(qtd, dir, cobra)\n %0A%09for i \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_16-48-38",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Gomo struct {\n\tx, y int\n}\n\nfunc main() {\n\tqtd := 0\n\tdir := \"\"\n\n\tfmt.Scan(&qtd, &dir)\n\tcobra := make([]Gomo, qtd)\n\tfor i := range cobra {\n\t\tfmt.Scan(&cobra[i].x, &cobra[i].y)\n\t}\n\n\tfor i := qtd - 1; i > 0; i-- {\n\t\tcobra[i] = cobra[i-1]\n\t}\n\tswitch dir {\n\tcase \"L\":\n\t\tcobra[0].x--\n\tcase \"R\":\n\t\tcobra[0].x++\n\tcase \"U\":\n\t\tcobra[0].y--\n\tcase \"D\":\n\t\tcobra[0].y++\n\t}\n\tfor _, gomo := range cobra {\n\t\tfmt.Printf(\"%v %v\\n\", gomo.x, gomo.y)\n\t}\n\n}\n",
+            "lines": "36"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-09-54",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tsolteiros := make(map[int]int)\n\t//solteiros[5] = 3 //tenho tres animais do tipo 5\n\t//j'ai pris tout mon amour d l'interieur de la terre, tu me manque beaucoup, au revoir, petit\n\tqtd := 0\n\tfmt.Scan(&qtd)\n\tpares := 0\n\tfor range qtd {\n\t\tanimal := 0 // isso \u00e9 o mesmo que var animal int = 0\n\t\tfmt.Scan(&animal)\n\t\tqtd, existe := solteiros[-animal]\n\t\tif existe && qtd > 0 {\n\t\t\tsolteiros[-animal] = qtd - 1\n\t\t\tpares += 1\n\t\t} else {\n\t\t\tsolteiros[animal] = solteiros[animal] + 1 // ou solteiros[animal]++\n\t\t}\n\t}\n\tfmt.Println(pares)\n}\n",
+            "lines": "24"
+        }
+    ]
+}

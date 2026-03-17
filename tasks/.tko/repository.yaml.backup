@@ -10,18 +10,19 @@ sources:
   target: https://github.com/qxcodepoo/arcade.git
   type: git
   writeable: false
+  cache_timestamp: '2026-03-17 15:54:54'
   quests: null
   tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-09 15:42:53'
+  cache_timestamp: '2026-03-17 15:54:57'
   quests: null
   tasks: null
 expanded:
-- ed@revisão
 - ed@árvore
+- ed@revisão
 - ed@main-quest
 - sandbox@student_sandbox_alias
 - sandbox@student_sandbox_alias:00_rascunhos
@@ -34,4 +35,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: py
-selected: sandbox@user_001
+selected: sandbox@user_000

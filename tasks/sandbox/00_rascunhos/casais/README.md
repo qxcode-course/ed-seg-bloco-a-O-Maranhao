@@ -17,7 +17,7 @@ Exemplo de teste para ler dois números, um por linha, e imprimir a soma e a sub
 
 Se quiser habilitar esses casos de teste e ver funcionando, altere o fenced abaixo de `bash` para `toml` e execute novamente a tarefa no TKO.
 
-```bash
+```toml
 [[tests]]
 input = '''
 3
