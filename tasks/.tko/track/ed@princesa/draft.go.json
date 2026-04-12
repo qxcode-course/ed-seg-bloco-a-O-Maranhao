@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-12_17-09-04",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,1316 +37,32 @@\n ) %7B%0A\n-%09var n int%0A%09var e int //dono da espada%0A%09fmt.Scan(&n, &e)%0A%09pessoas := %5B%5Dint%7B%7D //colchetes dizem o tamanho, quando vazios significa que %C3%A9 um slide;%0A%09for i := 1; i %3C= n; i++ %7B%0A%09%09pessoas = append(pessoas, i) //assim que se adiciona em Go, n%C3%A3o %C3%A9 tipo um m%C3%A9todo como em Java%0A%09%7D%0A%0A%09var espada int                      // ou espada := 0, essa espada %C3%A9 o ind%C3%ADce de E%0A%09for i := 0; i %3C len(pessoas); i++ %7B //estou atrabalho aqui com os %C3%ADndices, n%C3%A3o com os valores%0A%09%09if pessoas%5Bi%5D == e %7B%0A%09%09%09espada = i //espada %C3%A9 um %C3%ADndice%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%0A%09for i, valor := range pessoas %7B //Um for para ver quem tem a espada, i %C3%A9 o %C3%ADndice e o valor %C3%A9 o valor que t%C3%A1 na posi%C3%A7%C3%A3o sendo visa%0A%09%09if i == espada %7B%0A%09%09%09fmt.Println(%22%3E%22)%0A%09%09%7D%0A%09%09fmt.Print(valor, %22 %22) //coloca o valor e imprime um espa%C3%A7o.%0A%09%7D%0A%09fmt.Println() //s%C3%B3 pra quebrar linha%0A%09//vamos descobrir a v%C3%ADtima, no caso %C3%A9 (quem tem a espada + 1)%25len(pessoas)%0A%0A%09for len(pessoas) %3E 1 %7B //Enquanto tiver mais de uma pessoa%0A%09%09vitima := (espada + 1) %25 len(pessoas)                     //essa %C3%A9 a v%C3%ADtima, o %C3%ADndice dela no caso n%C3%A9. Essa %C3%A9 a posi%C3%A7%C3%A3o da v%C3%ADtima%0A%09%09pessoas = append(pessoas%5B:vitima%5D, pessoas%5Bvitima+1:%5D...) //Aqui, eu to passando um slice como se fosse um argumento, o : significa %22Tudo que vem antes ou depois%22, e as retici%C3%AAncias %C3%A9 para passar um array dinamico como argumentos%0A%09%7D%0A\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-12_18-05-16",
+            "content": "@@ -698,65 +698,8 @@\n isa%0A\n-%09%09fmt.Print(valor) //coloca o valor e imprime um espa%C3%A7o.%0A\n %09%09if\n@@ -725,17 +725,18 @@\n mt.Print\n-f\n+ln\n (%22%3E%22)%0A%09%09\n@@ -753,12 +753,57 @@\n int(\n-%22 %22)\n+valor, %22 %22) //coloca o valor e imprime um espa%C3%A7o.\n %0A%09%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-12_18-06-17",
+            "content": "@@ -566,60 +566,8 @@\n %09%7D%0A%0A\n-%09//Esse vai ser o for da impress%C3%A3o%0A%09fmt.Printf(%22%5B%22)%0A\n %09for\n@@ -808,14 +808,11 @@\n rint\n-f\n (%22\n-%5D%5Cn\n+ \n %22)%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-12_18-07-29",
+            "content": "@@ -860,11 +860,14 @@\n rint\n+f\n (%22\n- \n+%5D%5Cn\n %22)%0A%09\n@@ -885,11 +885,8 @@\n tln(\n-%22%5D%22\n ) //\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-07-48",
+            "content": "@@ -611,17 +611,16 @@\n rintf(%22%5B\n- \n %22)%0A%09for \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-09-04",
+            "content": "@@ -563,16 +563,438 @@\n %09%7D%0A%09%7D%0A%0A%09\n+//Esse vai ser o for da impress%C3%A3o%0A%09fmt.Printf(%22%5B %22)%0A%09for i, valor := range pessoas %7B //Um for para ver quem tem a espada, i %C3%A9 o %C3%ADndice e o valor %C3%A9 o valor que t%C3%A1 na posi%C3%A7%C3%A3o sendo visa%0A%09%09fmt.Print(valor) //coloca o valor e imprime um espa%C3%A7o.%0A%09%09if i == espada %7B%0A%09%09%09fmt.Printf(%22%3E%22)%0A%09%09%7D%0A%09%09fmt.Print(%22 %22)%0A%09%7D%0A%09fmt.Println(%22%5D%22) //s%C3%B3 pra quebrar linha%0A%09//vamos descobrir a v%C3%ADtima, no caso %C3%A9 (quem tem a espada + 1)%25len(pessoas)%0A%0A%09\n for len(\n@@ -1411,440 +1411,8 @@\n ntos\n-%0A%09%09//Esse vai ser o for da impress%C3%A3o%0A%09%09fmt.Printf(%22%5B %22)%0A%09%09for i, valor := range pessoas %7B //Um for para ver quem tem a espada, i %C3%A9 o %C3%ADndice e o valor %C3%A9 o valor que t%C3%A1 na posi%C3%A7%C3%A3o sendo visa%0A%09%09%09fmt.Print(valor) //coloca o valor e imprime um espa%C3%A7o.%0A%09%09%09if i == espada %7B%0A%09%09%09%09fmt.Printf(%22%3E%22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09fmt.Println(%22%5D%22) //s%C3%B3 pra quebrar linha%0A%09%09//vamos descobrir a v%C3%ADtima, no caso %C3%A9 (quem tem a espada + 1)%25len(pessoas)\n %0A%09%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-10-22",
+            "content": "@@ -622,16 +622,380 @@\n  pessoa%0A\n+%09%09vitima := (espada + 1) %25 len(pessoas)                     //essa %C3%A9 a v%C3%ADtima, o %C3%ADndice dela no caso n%C3%A9. Essa %C3%A9 a posi%C3%A7%C3%A3o da v%C3%ADtima%0A%09%09pessoas = append(pessoas%5B:vitima%5D, pessoas%5Bvitima+1:%5D...) //Aqui, eu to passando um slice como se fosse um argumento, o : significa %22Tudo que vem antes ou depois%22, e as retici%C3%AAncias %C3%A9 para passar um array dinamico como argumentos%0A\n %09%09//Esse\n@@ -1422,373 +1422,8 @@\n as)%0A\n-%09%09vitima := (espada + 1) %25 len(pessoas)                     //essa %C3%A9 a v%C3%ADtima, o %C3%ADndice dela no caso n%C3%A9. Essa %C3%A9 a posi%C3%A7%C3%A3o da v%C3%ADtima%0A%09%09pessoas = append(pessoas%5B:vitima%5D, pessoas%5Bvitima+1:%5D...) //Aqui, eu to passando um slice como se fosse um argumento, o : significa %22Tudo que vem antes ou depois%22, e as retici%C3%AAncias %C3%A9 para passar um array dinamico como argumentos%0A%0A\n %09%7D%0A%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_18-10-49",
+            "content": "@@ -1421,22 +1421,8 @@\n ntos\n-%0A%09%09espada += 1\n %0A%0A%09%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-18-15",
+            "content": "@@ -582,17 +582,17 @@\n soas) %3E \n-0\n+1\n  %7B //Enq\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-18-38",
+            "content": "@@ -1426,18 +1426,21 @@\n %09%09espada\n-++\n+ += 1\n %0A%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-19-16",
+            "content": "@@ -607,13 +607,26 @@\n ver \n-gente\n+mais de uma pessoa\n %0A%09%09/\n@@ -1432,145 +1432,12 @@\n da++\n-                                                  //o problema agora %C3%A9 que a espada n%C3%A3o t%C3%A1 ficando com o sobrevivente%0A%09%7D%0A%09fmt.Printf(%22%3E%22)\n+%0A%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-19-58",
+            "content": "@@ -582,17 +582,17 @@\n soas) %3E \n-1\n+0\n  %7B //Enq\n@@ -1404,16 +1404,27 @@\n gumentos\n+%0A%09%09espada++\n         \n@@ -1535,12 +1535,29 @@\n vente%0A%09%7D\n+%0A%09fmt.Printf(%22%3E%22)\n %0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-21-19",
+            "content": "@@ -1408,41 +1408,30 @@\n ntos\n-%0A%09%09espada = vitima %25 len(pessoas)\n+                      \n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-12_18-23-42",
+            "content": "@@ -581,17 +581,16 @@\n ssoas) %3E\n-=\n  1 %7B //E\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-24-00",
+            "content": "@@ -581,18 +581,19 @@\n ssoas) %3E\n- 0\n+= 1\n  %7B //Enq\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-24-08",
+            "content": "@@ -1427,12 +1427,10 @@\n ima \n-- 1\n %25\n+ \n len(\n@@ -1438,19 +1438,21 @@\n essoas) \n-+ 1\n+     \n         \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-24-51",
+            "content": "@@ -1416,17 +1416,16 @@\n spada = \n-(\n vitima -\n@@ -1430,13 +1430,9 @@\n  - 1\n-) %25 (\n+%25\n len(\n@@ -1443,17 +1443,22 @@\n oas) + 1\n-)\n+      \n         \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-25-17",
+            "content": "@@ -1420,17 +1420,24 @@\n a = \n+(\n vitima\n+ - 1)\n  %25 \n+(\n len(\n@@ -1441,35 +1441,28 @@\n en(pessoas) \n-           \n++ 1)\n             \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-25-33",
+            "content": "@@ -582,17 +582,17 @@\n soas) %3E \n-1\n+0\n  %7B //Enq\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-26-00",
+            "content": "@@ -922,16 +922,58 @@\n  %22)%0A%09%09%7D%0A\n+%09%09fmt.Println(%22%5D%22) //s%C3%B3 pra quebrar linha%0A\n %09%09//vamo\n@@ -1539,40 +1539,8 @@\n e%0A%09%7D\n-%0A%09fmt.Println(pessoas%5B0%5D, %22%3E %5D%22)\n %0A%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-27-03",
+            "content": "@@ -926,50 +926,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println(%22%5D%22) //s%C3%B3 pra quebrar linha%0A\n %09%09//\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-12_18-27-24",
+            "content": "@@ -1549,20 +1549,16 @@\n Println(\n-%22%5B %22\n pessoas%5B\n@@ -1560,16 +1560,17 @@\n soas%5B0%5D,\n+ \n %22%3E %5D%22)%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-27-49",
+            "content": "@@ -1553,18 +1553,16 @@\n tln(%22%5B %22\n-, \n pessoas%5B\n@@ -1564,17 +1564,16 @@\n soas%5B0%5D,\n- \n %22%3E %5D%22)%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-28-02",
+            "content": "@@ -1551,16 +1551,17 @@\n intln(%22%5B\n+ \n %22, pesso\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-28-17",
+            "content": "@@ -1550,18 +1550,13 @@\n rint\n-f\n+ln\n (%22%5B\n- %25d%3E %5D\n %22, p\n@@ -1564,13 +1564,20 @@\n ssoas%5B0%5D\n+, %22%3E %5D%22\n )%0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-30-21",
+            "content": "@@ -1560,10 +1560,8 @@\n d%3E %5D\n-%5Cn\n %22, p\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-12_18-30-29",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tvar e int //dono da espada\n\tfmt.Scan(&n, &e)\n\tpessoas := []int{} //colchetes dizem o tamanho, quando vazios significa que \u00e9 um slide;\n\tfor i := 1; i <= n; i++ {\n\t\tpessoas = append(pessoas, i) //assim que se adiciona em Go, n\u00e3o \u00e9 tipo um m\u00e9todo como em Java\n\t}\n\n\tvar espada int                      // ou espada := 0, essa espada \u00e9 o ind\u00edce de E\n\tfor i := 0; i < len(pessoas); i++ { //estou atrabalho aqui com os \u00edndices, n\u00e3o com os valores\n\t\tif pessoas[i] == e {\n\t\t\tespada = i //espada \u00e9 um \u00edndice\n\t\t\tbreak\n\t\t}\n\t}\n\n\tfor len(pessoas) > 1 { //Enquanto tiver gente\n\t\t//Esse vai ser o for da impress\u00e3o\n\t\tfmt.Printf(\"[ \")\n\t\tfor i, valor := range pessoas { //Um for para ver quem tem a espada, i \u00e9 o \u00edndice e o valor \u00e9 o valor que t\u00e1 na posi\u00e7\u00e3o sendo visa\n\t\t\tfmt.Print(valor) //coloca o valor e imprime um espa\u00e7o.\n\t\t\tif i == espada {\n\t\t\t\tfmt.Printf(\">\")\n\t\t\t}\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Println(\"]\") //s\u00f3 pra quebrar linha\n\t\t//vamos descobrir a v\u00edtima, no caso \u00e9 (quem tem a espada + 1)%len(pessoas)\n\t\tvitima := (espada + 1) % len(pessoas)                     //essa \u00e9 a v\u00edtima, o \u00edndice dela no caso n\u00e9. Essa \u00e9 a posi\u00e7\u00e3o da v\u00edtima\n\t\tpessoas = append(pessoas[:vitima], pessoas[vitima+1:]...) //Aqui, eu to passando um slice como se fosse um argumento, o : significa \"Tudo que vem antes ou depois\", e as retici\u00eancias \u00e9 para passar um array dinamico como argumentos\n\t\tespada = vitima % len(pessoas)                            //o problema agora \u00e9 que a espada n\u00e3o t\u00e1 ficando com o sobrevivente\n\t}\n\tfmt.Printf(\"[ %d> ]\\n\", pessoas[0])\n\n}\n",
+            "lines": "40"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_16-04-06",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc mostrar_jogadores(jogadores []bool, espada int) {\n\tfmt.Print(\"[\")\n\tfor i, valor := range jogadores {\n\t\tif valor == false {\n\t\t\tcontinue\n\t\t}\n\t\tfmt.Print(i + 1)\n\t\tif espada == i+1 {\n\t\t\tfmt.Print(\">\")\n\t\t}\n\t\tfmt.Print(\" \")\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc procurar_vivo(jogadores []bool, espada int) int {\n\tfor {\n\t\tespada = (espada + 1) % len(jogadores)\n\t\tif espada == len(jogadores) {\n\t\t\tespada = 0\n\t\t}\n\t\tif jogadores[espada] == true {\n\t\t\treturn espada\n\t\t}\n\t}\n}\n\nfunc main() {\n\tvar qtd, espada int\n\tfmt.Scan(&qtd, &espada)\n\tjogadores := make([]bool, qtd)\n\tfor i := range jogadores {\n\t\tjogadores[i] = true\n\t}\n\n\tfor range qtd - 1 {\n\t\tmostrar_jogadores(jogadores, espada)\n\t\tvai_morrer := procurar_vivo(jogadores, espada)\n\t\tjogadores[vai_morrer] = false\n\t\tespada = procurar_vivo(jogadores, espada)\n\t}\n\tmostrar_jogadores(jogadores, espada)\n\n}\n",
+            "lines": "48"
+        }
+    ]
+}

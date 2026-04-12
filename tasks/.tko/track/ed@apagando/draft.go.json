@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-12_18-32-12",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,466 +37,6 @@\n ) %7B%0A\n-%09var n int //N%C3%BAmero de pessoas da fila no in%C3%ADcio%0A%09fmt.Scan(&n)%0A%09var nn int               //identificador de n%C3%BAmero%0A%09var m int                // quantidade de gente que n%C3%A3o t%C3%A1 na fila%0A%09fila := %5B%5Dint%7B%7D          //aqui um slice%0A%09saidas := map%5Bint%5Dbool%7B%7D //Vamos usar mapa n%C3%A9, um mapa em go %C3%A9 map%5BKeyType%5DValueType%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&nn)%0A%09%09fila = append(fila, nn)%0A%09%09saidas%5Bnn%5D = false //por enquanto n%C3%A3o saiu, n%C3%A3o %C3%A9 intuitivo%0A%09%7D%0A%0A%09fmt.Scan(&m)%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-12_19-46-40",
+            "content": "@@ -421,79 +421,8 @@\n )%0A%09%09\n-// por enquanto tudo j%C3%A1 %C3%A9 falso ,n%C3%A3o precisa dessa linha de c%C3%B3digo aqui\n said\n@@ -498,336 +498,7 @@\n (&m)\n-%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&nn)%0A%09%09saidas%5Bnn%5D = true //marcando pra tirar depois%0A%09%7D%0A%0A%09fmt.Printf(%22%5B %22)%0A%09for _, valor := range fila %7B //n%C3%A3o usei o i n%C3%A9, ent botei um _%0A%09%09if !saidas%5Bvalor%5D %7B%0A%09%09%09//se para esse valor ele for falso, ou seja, se n%C3%A3o t%C3%A1 marcado para sair%0A%09%09%09fmt.Println(valor, %22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%5Cn%22)\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-12_19-54-58",
+            "content": "@@ -857,22 +857,21 @@\n rint\n-f(%22%25d %22, valor\n+ln(valor, %22 %22\n )%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_19-55-24",
+            "content": "@@ -661,16 +661,34 @@\n ois%0A%09%7D%0A%0A\n+%09fmt.Printf(%22%5B %22)%0A\n %09for _, \n@@ -889,12 +889,17 @@\n Println(\n+%22%5D%5Cn%22\n )%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_19-55-39",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int //N\u00famero de pessoas da fila no in\u00edcio\n\tfmt.Scan(&n)\n\tvar nn int               //identificador de n\u00famero\n\tvar m int                // quantidade de gente que n\u00e3o t\u00e1 na fila\n\tfila := []int{}          //aqui um slice\n\tsaidas := map[int]bool{} //Vamos usar mapa n\u00e9, um mapa em go \u00e9 map[KeyType]ValueType\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&nn)\n\t\tfila = append(fila, nn)\n\t\t// por enquanto tudo j\u00e1 \u00e9 falso ,n\u00e3o precisa dessa linha de c\u00f3digo aquisaidas[nn] = false //por enquanto n\u00e3o saiu, n\u00e3o \u00e9 intuitivo\n\t}\n\n\tfmt.Scan(&m)\n\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&nn)\n\t\tsaidas[nn] = true //marcando pra tirar depois\n\t}\n\n\tfor _, valor := range fila { //n\u00e3o usei o i n\u00e9, ent botei um _\n\t\tif !saidas[valor] {\n\t\t\t//se para esse valor ele for falso, ou seja, se n\u00e3o t\u00e1 marcado para sair\n\t\t\tfmt.Printf(\"%d \", valor)\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "33"
+        }
+    ]
+}

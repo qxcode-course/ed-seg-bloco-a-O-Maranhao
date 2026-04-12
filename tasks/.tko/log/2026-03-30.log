@@ -1,0 +1,12 @@
+2026-03-30 15:50:02, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-30 15:50:25, MOVE, v:1, k:sandbox@user_003, mode:PICK
+2026-03-30 16:04:06, EXEC, v:1, k:sandbox@user_003, mode:LOCK, rate:0, size:48
+2026-03-30 16:04:22, EXEC, v:1, k:sandbox@user_003, mode:FULL, rate:0
+2026-03-30 16:04:34, MOVE, v:1, k:sandbox@user_003, mode:BACK
+2026-03-30 16:10:32, MOVE, v:1, k:ed@fractais, mode:DOWN
+2026-03-30 16:10:46, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-03-30 16:10:50, EXEC, v:1, k:sandbox@user_004, mode:FREE, size:0
+2026-03-30 16:10:59, MOVE, v:1, k:sandbox@user_004, mode:BACK
+2026-03-30 16:11:01, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-03-30 16:11:03, EXEC, v:1, k:sandbox@user_004, mode:FREE
+2026-03-30 16:11:12, MOVE, v:1, k:sandbox@user_004, mode:BACK
