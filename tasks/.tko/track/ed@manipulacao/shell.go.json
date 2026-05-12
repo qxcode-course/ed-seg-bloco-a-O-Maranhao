@@ -1,0 +1,179 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-11_19-01-58",
+            "content": "@@ -463,56 +463,8 @@\n 0 %7B%0A\n-%09%09%09stress := vet%5Bi%5D * (-1)%0A%09%09%09if stress %3C 10 %7B%0A%09\n %09%09%09r\n@@ -504,13 +504,8 @@\n i%5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-05-11_19-06-39",
+            "content": "@@ -87,16 +87,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -618,193 +618,15 @@\n  %7B%0A%09\n-ordenado := make(%5B%5Dint, len(vet)) //make cria um slice de tamanho fixo do tipo make(tipo de valor, tamanho)%0A%09copy(ordenado, vet)               //(copiador, copiado)%0A%09sort.Ints(ordenado)\n+_ = vet\n %0A%09re\n@@ -634,16 +634,11 @@\n urn \n-ordenado\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-05-11_19-13-07",
+            "content": "@@ -868,240 +868,27 @@\n  %7B%0A%09\n-resultado := make(%5B%5Dint, len(vet))%0A%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if vet%5Bi%5D %3C 0 %7B%0A%09%09%09resultado = append(resultado, vet%5Bi%5D*(-1))%0A%09%09%7D else %7B%0A%09%09%09resultado = append(resultado, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09sort.Ints(resultado)%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "122"
+        },
+        {
+            "label": "2026-05-11_19-18-00",
+            "content": "@@ -988,24 +988,20 @@\n do, \n-(\n vet%5Bi%5D\n- * \n+*\n (-1))\n-)\n %0A%09%09%7D\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-05-11_19-18-27",
+            "content": "@@ -980,30 +980,39 @@\n (resultado, \n+(\n vet%5Bi%5D\n+ * (-1))\n )%0A%09%09%7D else %7B\n@@ -1066,331 +1066,28 @@\n %7D%0A%0A%09\n-ordenado := make(%5B%5Dint, len(vet))%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09stressI := vet%5Bi%5D%0A%09%09stressJ := vet%5Bi+1%5D%0A%0A%09%09if stressI %3C 0 %7B%0A%09%09%09stressI = -stressI%0A%09%09%7D%0A%09%09if stressJ %3C 0 %7B%0A%09%09%09stressJ = -stressJ%0A%09%09%7D%0A%0A%09%09if stressJ %3E stressI %7B%0A%09%09%09ordenado = append(ordenado, stressI)%0A%09%09%7D else %7B%0A%09%09%09ordenado = append(ordenado, stressJ)%0A%09%09%7D%0A%09%7D\n+sort.Ints(resultado)\n %0A%09re\n@@ -1083,37 +1083,38 @@\n ultado)%0A%09return \n-orden\n+result\n ado%0A%7D%0A%0Afunc reve\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-05-11_19-26-26",
+            "content": "@@ -1314,14 +1314,15 @@\n do, \n-vet%5B1%5D\n+stressI\n )%0A%09%09\n@@ -1361,24 +1361,23 @@\n denado, \n-vet%5Bi+1%5D\n+stressJ\n )%0A%09%09%7D%0A%09%7D\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-05-11_19-27-25",
+            "content": "@@ -856,37 +856,38 @@\n %5B%5Dint) %5B%5Dint %7B%0A%09\n-orden\n+result\n ado := make(%5B%5Din\n@@ -903,71 +903,226 @@\n t))%0A\n-%09copy(ordenado, vet)%0A%0A%09sort.Slice(ordenado, func(i, j int) bool\n+%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if vet%5Bi%5D %3C 0 %7B%0A%09%09%09resultado = append(resultado, vet%5Bi%5D)%0A%09%09%7D else %7B%0A%09%09%09resultado = append(resultado, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09ordenado := make(%5B%5Dint, len(vet))%0A%09for i := 0; i %3C len(vet); i++\n  %7B%0A%09\n@@ -1133,24 +1133,19 @@\n essI := \n-ordenado\n+vet\n %5Bi%5D%0A%09%09st\n@@ -1153,24 +1153,19 @@\n essJ := \n-ordenado\n+vet\n %5Bi+1%5D%0A%0A%09\n@@ -1260,36 +1260,128 @@\n %0A%0A%09%09\n-return\n+if\n  stress\n-I %3C\n+J %3E\n  stress\n-J%0A%09%7D)\n+I %7B%0A%09%09%09ordenado = append(ordenado, vet%5B1%5D)%0A%09%09%7D else %7B%0A%09%09%09ordenado = append(ordenado, vet%5Bi+1%5D)%0A%09%09%7D%0A%09%7D\n %0A%09re\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-05-11_19-36-46",
+            "content": "@@ -1011,17 +1011,19 @@\n rdenado%5B\n-j\n+i+1\n %5D%0A%0A%09%09if \n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-05-11_19-37-29",
+            "content": "@@ -811,40 +811,8 @@\n ado)\n-               //biblioteca sort\n %0A%09re\n@@ -1194,143 +1194,27 @@\n  %7B%0A%09\n-resultado := make(%5B%5Dint, len(vet))%0A%09for i := (len(vet) - 1); i %3E= 0; i-- %7B%0A%09%09resultado = append(resultado, vet%5Bi%5D)%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-05-11_20-41-02",
+            "content": "@@ -1267,16 +1267,17 @@\n or i := \n+(\n len(vet)\n@@ -1280,16 +1280,17 @@\n vet) - 1\n+)\n ; i %3E= 0\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_20-41-26",
+            "content": "@@ -1275,16 +1275,20 @@\n len(vet)\n+ - 1\n ; i %3E= 0\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_20-41-38",
+            "content": "@@ -1280,16 +1280,17 @@\n et); i %3E\n+=\n  0; i-- \n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_20-42-01",
+            "content": "@@ -1279,12 +1279,8 @@\n vet)\n- - 1\n ; i \n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_20-42-19",
+            "content": "@@ -1267,17 +1267,16 @@\n or i := \n-(\n len(vet)\n@@ -1279,17 +1279,16 @@\n vet) - 1\n-)\n ; i %3E 0;\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_20-42-46",
+            "content": "@@ -1227,39 +1227,53 @@\n %7B%0A%09resultado := \n-%5B%5Dint%7B%7D\n+make(%5B%5Dint, len(vet))\n %0A%09for i := len(v\n@@ -1267,16 +1267,17 @@\n or i := \n+(\n len(vet)\n@@ -1284,14 +1284,14 @@\n  - 1\n+)\n ; i %3E\n-=\n  0; \n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_20-46-05",
+            "content": "@@ -1246,77 +1246,9 @@\n nt%7B%7D\n- //engra%C3%A7ado, quando fiz resultado:=make(%5B%5Dint, len(vet)) deu errado\n %0A\n+\n %09for\n@@ -1381,350 +1381,27 @@\n  %7B%0A%09\n-//vamo ter que verificar a unicidade, criamos um slice para %22marcar%22 os valores j%C3%A1 vistos%0A%09unico := map%5Bint%5Dbool%7B%7D // mapa%5Bvalor da chave%5Dvalor que ela armazena%0A%09resultado := %5B%5Dint%7B%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09valor := vet%5Bi%5D%0A%09%09if !unico%5Bvalor%5D %7B%0A%09%09%09resultado = append(resultado, valor)%0A%09%09%09unico%5Bvalor%5D = true%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-05-11_21-11-40",
+            "content": "@@ -1829,337 +1829,27 @@\n  %7B%0A%09\n-unico := map%5Bint%5Dbool%7B%7D // mapa%5Bvalor da chave%5Dvalor que ela armazena%0A%09resultado := %5B%5Dint%7B%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09valor := vet%5Bi%5D%0A%09%09if !unico%5Bvalor%5D %7B%0A%09%09%09unico%5Bvalor%5D = true%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09valor := vet%5Bi%5D%0A%09%09if unico%5Bvalor%5D %7B%0A%09%09%09resultado = append(resultado, valor)%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-05-11_21-13-14",
+            "content": "@@ -1825,23 +1825,20 @@\n %5Dint %7B%0A%09\n-repetid\n+unic\n o := map\n@@ -1966,39 +1966,36 @@\n := vet%5Bi%5D%0A%09%09if !\n-repetid\n+unic\n o%5Bvalor%5D %7B%0A%09%09%09re\n@@ -1992,23 +1992,20 @@\n r%5D %7B%0A%09%09%09\n-repetid\n+unic\n o%5Bvalor%5D\n@@ -2079,16 +2079,12 @@\n %09if \n-!repetid\n+unic\n o%5Bva\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-14-11",
+            "content": "@@ -1845,19 +1845,20 @@\n map%5Bint%5D\n-int\n+bool\n %7B%7D // ma\n@@ -1972,24 +1972,25 @@\n vet%5Bi%5D%0A%09%09if \n+!\n repetido%5Bval\n@@ -1996,11 +1996,9 @@\n lor%5D\n-==0\n+ \n %7B%0A%09%09\n@@ -2016,11 +2016,16 @@\n alor\n-++%5D\n+%5D = true\n %0A%09%09%7D\n@@ -2038,39 +2038,59 @@\n or i\n+ \n := 0;\n-i%3Clen(repetido\n+ i %3C len(vet\n );\n+ \n i++\n+ \n %7B%0A\n+%09%09valor := vet%5Bi%5D%0A\n %09%09if \n+!\n repe\n@@ -2098,12 +2098,14 @@\n ido%5B\n-i%5D%3E0\n+valor%5D\n  %7B%0A%09\n@@ -2115,17 +2115,19 @@\n esultado\n-=\n+ = \n append(r\n@@ -2140,19 +2140,13 @@\n do, \n-repetido%5Bi%5D\n+valor\n )%0A%09%09\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-20-56",
+            "content": "@@ -1994,14 +1994,11 @@\n lor%5D\n- \n ==\n- 0 \n+0\n %7B%0A%09%09\n@@ -2016,11 +2016,11 @@\n alor\n-%5D\n ++\n+%5D\n %0A%09%09%7D\n@@ -2025,35 +2025,31 @@\n %09%7D%0A%09%7D%0A%09for i\n- \n := 0;\n- i %3C \n+i%3C\n len(repetido\n@@ -2050,21 +2050,19 @@\n petido);\n- \n i++\n- \n %7B%0A%09%09if r\n@@ -2071,19 +2071,17 @@\n etido%5Bi%5D\n- %3E \n+%3E\n 0 %7B%0A%09%09%09r\n@@ -2080,35 +2080,33 @@\n 0 %7B%0A%09%09%09resultado\n- = \n+=\n append(resultado\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-05-11_21-21-12",
+            "content": "@@ -2137,27 +2137,8 @@\n i%5D)%0A\n-%09%09%09repetido%5Bi%5D = 0%0A\n %09%09%7D%0A\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-05-11_21-21-44",
+            "content": "@@ -2083,17 +2083,17 @@\n do%5Bi%5D %3E \n-1\n+0\n  %7B%0A%09%09%09re\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-22-40",
+            "content": "@@ -1991,17 +1991,17 @@\n %5Bvalor%5D \n-%3E\n+=\n = 0 %7B%0A%09%09\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-23-12",
+            "content": "@@ -2082,17 +2082,16 @@\n ido%5Bi%5D %3E\n-=\n  1 %7B%0A%09%09%09\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-23-26",
+            "content": "@@ -2151,17 +2151,17 @@\n do%5Bi%5D = \n-1\n+0\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-23-42",
+            "content": "@@ -2082,16 +2082,17 @@\n ido%5Bi%5D %3E\n+=\n  1 %7B%0A%09%09%09\n@@ -2151,17 +2151,17 @@\n do%5Bi%5D = \n-0\n+1\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-23-53",
+            "content": "@@ -1973,34 +1973,38 @@\n t%5Bi%5D\n- //valor que o index pega%0A\n+%0A%09%09if repetido%5Bvalor%5D %3E= 0 %7B%0A%09\n %09%09re\n@@ -2019,16 +2019,20 @@\n alor%5D++%0A\n+%09%09%7D%0A\n %09%7D%0A%09for \n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-28-53",
+            "content": "@@ -2031,35 +2031,40 @@\n i := 0; i %3C len(\n-vet\n+repetido\n ); i++ %7B%0A%09%09if re\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-05-11_21-30-37",
+            "content": "@@ -2099,35 +2099,40 @@\n pend(resultado, \n-vet\n+repetido\n %5Bi%5D)%0A%09%09%09repetido\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-05-11_21-31-59",
+            "content": "@@ -2133,40 +2133,19 @@\n o%5Bi%5D\n---\n+ = 0\n %0A%09%09%7D%0A%09%7D\n-%0A%0A%09sort.Ints(resultado)\n %0A%09re\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-05-11_21-32-46",
+            "content": "@@ -2069,17 +2069,16 @@\n ido%5Bi%5D %3E\n-=\n  1 %7B%0A%09%09%09\n@@ -2139,16 +2139,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09sort.In\n@@ -2162,17 +2162,16 @@\n ultado)%0A\n-%0A\n %09return \n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-33-06",
+            "content": "@@ -2065,26 +2065,27 @@\n epetido%5Bi%5D %3E\n- 0\n+= 1\n  %7B%0A%09%09%09result\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-33-24",
+            "content": "@@ -2070,17 +2070,17 @@\n do%5Bi%5D %3E \n-1\n+0\n  %7B%0A%09%09%09re\n@@ -2107,32 +2107,49 @@\n ultado, vet%5Bi%5D)%0A\n+%09%09%09repetido%5Bi%5D--%0A\n %09%09%7D%0A%09%7D%0A%09sort.Int\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-11_21-35-06",
+            "content": "@@ -1825,20 +1825,23 @@\n %5Dint %7B%0A%09\n-unic\n+repetid\n o := map\n@@ -1849,36 +1849,59 @@\n int%5D\n-bool\n+int\n %7B%7D //\n-verificar unicidade\n+ mapa%5Bvalor da chave%5Dvalor que ela armazena\n %0A%09re\n@@ -1919,17 +1919,16 @@\n %5B%5Dint%7B%7D%0A\n-%0A\n %09for i :\n@@ -2001,23 +2001,23 @@\n a%0A%09%09\n-if unic\n+repetid\n o%5Bvalor%5D\n  %7B%0A%09\n@@ -2004,32 +2004,91 @@\n %09repetido%5Bvalor%5D\n+++%0A%09%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if repetido%5Bi%5D %3E 1\n  %7B%0A%09%09%09resultado \n@@ -2119,42 +2119,8 @@\n i%5D)%0A\n-%09%09%7D else %7B%0A%09%09%09unico%5Bvalor%5D = true%0A\n %09%09%7D%0A\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-05-11_21-40-04",
+            "content": "package main\n\n//parece que s\u00f3 vou precisar fazer as fun\u00e7\u00e3o\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tresultado := []int{}\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] > 0 {\n\t\t\tresultado = append(resultado, vet[i])\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tresultado := []int{} //[] declara que \u00e9 um slice, int \u00e9 o tipo, {} \u00e9 iniciando ele vazio\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] < 0 {\n\t\t\tstress := vet[i] * (-1)\n\t\t\tif stress < 10 {\n\t\t\t\tresultado = append(resultado, vet[i])\n\t\t\t}\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc sortVet(vet []int) []int {\n\tordenado := make([]int, len(vet)) //make cria um slice de tamanho fixo do tipo make(tipo de valor, tamanho)\n\tcopy(ordenado, vet)               //(copiador, copiado)\n\tsort.Ints(ordenado)               //biblioteca sort\n\treturn ordenado\n}\n\nfunc sortStress(vet []int) []int {\n\tordenado := make([]int, len(vet))\n\tcopy(ordenado, vet)\n\n\tsort.Slice(ordenado, func(i, j int) bool {\n\t\tstressI := ordenado[i]\n\t\tstressJ := ordenado[j]\n\n\t\tif stressI < 0 {\n\t\t\tstressI = -stressI\n\t\t}\n\t\tif stressJ < 0 {\n\t\t\tstressJ = -stressJ\n\t\t}\n\n\t\treturn stressI < stressJ\n\t})\n\treturn ordenado\n}\n\nfunc reverse(vet []int) []int {\n\tresultado := []int{} //engra\u00e7ado, quando fiz resultado:=make([]int, len(vet)) deu errado\n\tfor i := len(vet) - 1; i >= 0; i-- {\n\t\tresultado = append(resultado, vet[i])\n\t}\n\treturn resultado\n}\n\nfunc unique(vet []int) []int {\n\t//vamo ter que verificar a unicidade, criamos um slice para \"marcar\" os valores j\u00e1 vistos\n\tunico := map[int]bool{} // mapa[valor da chave]valor que ela armazena\n\tresultado := []int{}\n\tfor i := 0; i < len(vet); i++ {\n\t\tvalor := vet[i]\n\t\tif !unico[valor] {\n\t\t\tresultado = append(resultado, valor)\n\t\t\tunico[valor] = true\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc repeated(vet []int) []int {\n\tunico := map[int]bool{} //verificar unicidade\n\tresultado := []int{}\n\n\tfor i := 0; i < len(vet); i++ {\n\t\tvalor := vet[i] //valor que o index pega\n\t\tif unico[valor] {\n\t\t\tresultado = append(resultado, vet[i])\n\t\t} else {\n\t\t\tunico[valor] = true\n\t\t}\n\t}\n\tsort.Ints(resultado)\n\n\treturn resultado\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n",
+            "lines": "161"
+        }
+    ]
+}
