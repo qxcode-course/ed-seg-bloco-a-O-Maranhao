@@ -22,7 +22,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@sandbox
+- ed@vector
+- ed@map_set
+- ed@rec
+- ed@list
 flags:
   inbox: all
   panel: graph
@@ -30,4 +33,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@rec
+selected: ed@treinando
