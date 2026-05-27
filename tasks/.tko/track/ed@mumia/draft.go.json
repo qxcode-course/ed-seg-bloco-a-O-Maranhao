@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_11-23-34",
+            "content": "@@ -41,218 +41,35 @@\n     \n-var nome string%0A    var idade int%0A%0A    fmt.Scan(&nome)%0A    fmt.Scan(&idade)%0A    //pensei em usar if mas vou de switch%0A%0A    switch(idade)%7B%0A        case idade %3C 12%0A            Printf(%22%25c eh crianca%5Cn%22, nome)%0A    %7D\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-27_11-28-55",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var nome\n@@ -53,17 +53,20 @@\n  string%0A\n-%09\n+    \n var idad\n@@ -72,17 +72,20 @@\n de int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -92,17 +92,20 @@\n (&nome)%0A\n-%09\n+    \n fmt.Scan\n@@ -113,17 +113,20 @@\n &idade)%0A\n-%09\n+    \n //pensei\n@@ -160,25 +160,35 @@\n ch%0A%0A\n-%09\n+    \n switch\n- \n+(\n idade\n- %7B%0A%09\n+)%7B%0A        \n case\n@@ -202,12 +202,21 @@\n %3C 12\n-:%0A%09%09\n+%0A            \n Prin\n@@ -247,17 +247,12 @@\n me)%0A\n-%09%09break%0A%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_11-29-06",
+            "content": "@@ -169,9 +169,18 @@\n ase \n-8\n+idade %3C 12\n :%0A%09%09\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_11-29-15",
+            "content": "@@ -107,94 +107,75 @@\n de)%0A\n-%0A%09if idade %3C 12 %7B%0A%09%09fmt.Printf(%22%25c eh crianca%5Cn%22, nome)%0A%09%7D else if idade %3C 18 %7B%0A%09%09fmt.\n+%09//pensei em usar if mas vou de switch%0A%0A%09switch idade %7B%0A%09case 8:%0A%09%09\n Prin\n@@ -202,13 +202,21 @@\n , nome)%0A\n+%09%09break%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_11-30-25",
+            "content": "@@ -128,33 +128,33 @@\n %0A%09%09fmt.Printf(%22%25\n-s\n+c\n  eh crianca%5Cn%22, \n@@ -198,17 +198,17 @@\n rintf(%22%25\n-s\n+c\n  eh cria\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-27_11-30-43",
+            "content": "@@ -207,14 +207,15 @@\n  eh \n-adulto\n+crianca\n %5Cn%22,\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-27_11-32-41",
+            "content": "@@ -207,193 +207,14 @@\n  eh \n-jovem%5Cn%22, nome)%0A%09%7D else if idade %3C 65 %7B%0A%09%09fmt.Printf(%22%25s eh adulto%5Cn%22, nome)%0A%09%7D else if idade %3C 1000 %7B%0A%09%09fmt.Printf(%22%25s eh idoso%5Cn%22, nome)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22%25s caralho e uma mumia\n+adulto\n %5Cn%22,\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-27_11-34-39",
+            "content": "@@ -369,18 +369,29 @@\n ntf(%22%25s \n-eh\n+caralho e uma\n  mumia%5Cn\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-27_11-34-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar nome string\n\tvar idade int\n\n\tfmt.Scan(&nome)\n\tfmt.Scan(&idade)\n\n\tif idade < 12 {\n\t\tfmt.Printf(\"%s eh crianca\\n\", nome)\n\t} else if idade < 18 {\n\t\tfmt.Printf(\"%s eh jovem\\n\", nome)\n\t} else if idade < 65 {\n\t\tfmt.Printf(\"%s eh adulto\\n\", nome)\n\t} else if idade < 1000 {\n\t\tfmt.Printf(\"%s eh idoso\\n\", nome)\n\t} else {\n\t\tfmt.Printf(\"%s eh mumia\\n\", nome)\n\t}\n}\n",
+            "lines": "23"
+        }
+    ]
+}

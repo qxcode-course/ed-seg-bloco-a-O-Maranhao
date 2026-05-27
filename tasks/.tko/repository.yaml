@@ -6,26 +6,20 @@ sources:
   type: local
   writeable: true
   quests: null
-  tasks: null
 - name: poo
   target: https://github.com/qxcodepoo/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 expanded:
-- ed@vector
-- ed@map_set
-- ed@rec
-- ed@list
+- ed@basic
 flags:
   inbox: all
   panel: graph
@@ -33,4 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@treinando
+selected: ed@casais
+selected_index: 13

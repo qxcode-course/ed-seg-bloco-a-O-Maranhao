@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_11-19-03",
+            "content": "@@ -260,18 +260,16 @@\n in() %7B%0A%09\n-//\n fmt.Prin\n@@ -292,52 +292,8 @@\n d!%22)\n- //esqueci de tirar o helloworld de primeira\n %0A%09va\n@@ -513,63 +513,15 @@\n rint\n-f(%22%25.2f%5Cn%22, area) //pra imprimir com duas casas decimais\n+ln(area)\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-27_11-20-13",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\n//usando a biblioteca math para o squareroot/raiz quadrada\n\n// Ok, vamo usar algumas formulas matematicas\n// tipo s = (a+b+c)/2 pro semiper\u00edmetro\n// outra f\u00f3rmula \u00e9 a de \u00e1rea que \u00e9 a = sqrt(s*(s-a)*(s-b)*(s-c))\nfunc main() {\n\t//fmt.Println(\"Hello, World!\") //esqueci de tirar o helloworld de primeira\n\tvar a, b, c float64\n\tfmt.Scan(&a, &b, &c)\n\n\t//vamo calcular o semiperimetro\n\ts := (a + b + c) / 2 //quando uso o := \u00e9 assumido como float64\n\t//agora a area\n\tarea := math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\n\tfmt.Printf(\"%.2f\\n\", area) //pra imprimir com duas casas decimais\n}\n",
+            "lines": "24"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_11-37-25",
+            "content": "@@ -41,382 +41,35 @@\n     \n-var h, p, f, d int //variaveis daora de entrada%0A    fmt.Scan(&h, &p,&f, &d)%0A%0A    while(true)%7B%0A        //qual a logica: nosso fugitivo anda at%C3%A9 cair numa casa do helicoptero ou da policia, a dire%C3%A7%C3%A3o define se %C3%A9 horar%C3%ADo ou antihor%C3%A1rio%0A        f = (f+d)%2516%0A        if f == h%7B%0A            fmt.Printf(%22S%5Cn%22)%0A        %7D else if f == p%7B%0A            fmt.Printf(%22N%5Cn%22)%0A        %7D%0A    %7D%0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-27_11-45-18",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var h, p\n@@ -85,17 +85,20 @@\n entrada%0A\n-%09\n+    \n fmt.Scan\n@@ -105,17 +105,16 @@\n (&h, &p,\n- \n &f, &d)%0A\n@@ -118,105 +118,33 @@\n d)%0A%0A\n-%09for %7B //acabei de descobrir que nao existe while in Golang (na real eu ja sabia e so esqueci)%0A%09%09\n+    while(true)%7B%0A        \n //qu\n@@ -274,29 +274,37 @@\n rio%0A\n-%09%09f = (f + d) %25 16%0A%09%09\n+        f = (f+d)%2516%0A        \n if f\n@@ -308,22 +308,30 @@\n f f == h\n- \n %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -340,27 +340,24 @@\n (%22S%5Cn%22)%0A\n-%09%09%09break%0A%09%09\n+        \n %7D else i\n@@ -368,14 +368,22 @@\n == p\n- \n %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -400,22 +400,22 @@\n n%22)%0A\n-%09%09%09break%0A%09%09%7D%0A%09\n+        %7D%0A    \n %7D%0A%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-27_11-46-15",
+            "content": "@@ -355,13 +355,8 @@\n  + d\n- + 16\n ) %25 \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-27_11-46-33",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int //variaveis daora de entrada\n\tfmt.Scan(&h, &p, &f, &d)\n\n\tfor { //acabei de descobrir que nao existe while in Golang (na real eu ja sabia e so esqueci)\n\t\t//qual a logica: nosso fugitivo anda at\u00e9 cair numa casa do helicoptero ou da policia, a dire\u00e7\u00e3o define se \u00e9 horar\u00edo ou antihor\u00e1rio\n\t\tf = (f + d + 16) % 16\n\t\tif f == h {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t\tbreak\n\t\t} else if f == p {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t\tbreak\n\t\t}\n\t}\n\n}\n",
+            "lines": "21"
+        }
+    ]
+}
