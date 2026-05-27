@@ -2,8 +2,123 @@
     "patches": [
         {
             "label": "2026-05-27_11-48-23",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -10,38 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22slices%22%0A)%0A%0A\n func\n@@ -37,298 +37,39 @@\n ) %7B%0A\n-%0A%09var n int    //numero de animais%0A%09fmt.Scan(&n) //%0A%09//vamo trabalhar com vetores%0A%09var s %5B%5Dint //s de solteiros%0A%09var pares int%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09var animal int%0A%09%09fmt.Scan(&animal)%0A%09%09if slices.Contains(s, animal) %7B%0A%09%09%09s%5Bi%5D = 0%0A%09%09%09pares++%0A%09%09%7D else %7B%0A%09%09%09s = append(s, animal)%0A%09%09%7D%0A%09%7D%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-27_14-32-46",
+            "content": "@@ -346,33 +346,6 @@\n %09%7D%0A%0A\n-%09fmt.Printf(%22%25d%5Cn%22, pares)%0A\n %7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_14-34-02",
+            "content": "@@ -142,18 +142,14 @@\n ar s\n- =\n  %5B%5Dint\n-%7B%7D\n  //s\n@@ -176,20 +176,16 @@\n ares int\n- = 0\n %0A%0A%09for i\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-34-50",
+            "content": "@@ -137,11 +137,14 @@\n es%0A%09\n+var \n s \n-:\n = %5B%5D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-35-33",
+            "content": "@@ -274,18 +274,15 @@\n (s, \n--(\n animal)\n-)\n  %7B%0A%09\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-36-06",
+            "content": "@@ -274,40 +274,43 @@\n (s, \n+-(\n animal)\n+)\n  %7B%0A%09%09%09\n-pares++%0A%09%09%09s%5Bi%5D = 0\n+s%5Bi%5D = 0%0A%09%09%09pares++\n %0A%09%09%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-37-51",
+            "content": "@@ -287,27 +287,27 @@\n %0A%09%09%09\n-s%5Bn%5D = 0%0A%09%09%09pares++\n+pares++%0A%09%09%09s%5Bi%5D = 0\n %0A%09%09%7D\n@@ -376,10 +376,8 @@\n ares\n-+1\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-38-42",
+            "content": "@@ -372,12 +372,14 @@\n %22, pares\n++1\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-38-48",
+            "content": "@@ -281,49 +281,16 @@\n mal)\n- %7C%7C slices.Contains(s, animal*-1)\n  %7B%0A%09%09%09s%5B\n i%5D =\n@@ -285,17 +285,17 @@\n  %7B%0A%09%09%09s%5B\n-i\n+n\n %5D = 0%0A%09%09\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-39-47",
+            "content": "@@ -313,16 +313,28 @@\n l*-1) %7B%0A\n+%09%09%09s%5Bi%5D = 0%0A\n %09%09%09pares\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-39-59",
+            "content": "@@ -280,14 +280,42 @@\n imal\n+) %7C%7C slices.Contains(s, animal\n *\n-(\n -1)\n-)\n  %7B%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_14-40-27",
+            "content": "@@ -289,20 +289,8 @@\n ) %7B%0A\n-%09%09%09s%5Bi%5D = 0%0A\n %09%09%09p\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_14-41-53",
+            "content": "@@ -285,16 +285,28 @@\n (-1)) %7B%0A\n+%09%09%09s%5Bi%5D = 0%0A\n %09%09%09pares\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-42-01",
+            "content": "@@ -365,14 +365,12 @@\n %22, pares\n--1\n )%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_14-42-09",
+            "content": "@@ -365,12 +365,14 @@\n %22, pares\n+-1\n )%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_14-42-25",
+            "content": "@@ -300,41 +300,8 @@\n s++%0A\n-%09%09%09s = append(s%5B:i%5D, s%5Bi+1:%5D...)%0A\n %09%09%7D \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_14-43-24",
+            "content": "@@ -292,32 +292,48 @@\n %0A%09%09%09\n-s%5Banimal%5D = 0%0A%09%09%09pares++\n+pares++%0A%09%09%09s = append(s%5B:i%5D, s%5Bi+1:%5D...)\n %0A%09%09%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-44-37",
+            "content": "@@ -285,16 +285,33 @@\n (-1)) %7B%0A\n+%09%09%09s%5Banimal%5D = 0%0A\n %09%09%09pares\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-27_14-47-44",
+            "content": "@@ -23,16 +23,26 @@\n %0A%09%22fmt%22%0A\n+%09%22slices%22%0A\n )%0A%0Afunc \n@@ -255,12 +255,26 @@\n %09if \n-i ==\n+slices.Contains(s,\n  ani\n@@ -285,23 +285,12 @@\n (-1)\n+)\n  %7B%0A\n-%09%09%09s%5Bi%5D = 0%0A\n %09%09%09p\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_17-54-38",
+            "content": "@@ -177,26 +177,8 @@\n  0%0A%0A\n-%09casados := false%0A\n %09for\n@@ -250,23 +250,19 @@\n  == \n-(\n animal\n- * \n+*\n (-1)\n-)\n  %7B%0A%09\n@@ -279,73 +279,28 @@\n %0A%09%09%09\n-casados = true%0A%09%09%09pares++%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%09if casados == fa\n+pares++%0A%09%09%7D e\n lse %7B%0A\n+%09\n %09%09s \n@@ -319,16 +319,20 @@\n animal)%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09fmt\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-27_17-57-11",
+            "content": "@@ -176,52 +176,8 @@\n = 0%0A\n-%09var animal int // o animal que vai ser lido\n %0A%09ca\n@@ -191,17 +191,16 @@\n = false%0A\n-%0A\n %09for i :\n@@ -217,16 +217,33 @@\n ; i++ %7B%0A\n+%09%09var animal int%0A\n %09%09fmt.Sc\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-27_17-57-47",
+            "content": "@@ -171,16 +171,79 @@\n  int = 0\n+%0A%09var animal int // o animal que vai ser lido%0A%09casados := false\n %0A%0A%09for i\n@@ -266,25 +266,8 @@\n + %7B%0A\n-%09%09var animal int%0A\n %09%09fm\n@@ -286,67 +286,14 @@\n al)%0A\n-%0A%09%09casados := false%0A%09%09for j := 0; j %3C len(s); j++ %7B%0A%09%09%09if j\n+%09%09if i\n  == \n@@ -317,19 +317,17 @@\n %0A%09%09%09\n-%09\n s%5B\n-j\n+i\n %5D = 0%0A\n-%09\n %09%09%09c\n@@ -340,17 +340,16 @@\n  = true%0A\n-%09\n %09%09%09pares\n@@ -358,17 +358,16 @@\n %0A%09%09%09\n-%09\n break%0A%09%09\n %09%7D%0A%09\n@@ -366,29 +366,25 @@\n k%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D%0A\n-%09\n %09if \n-!\n casados \n %7B%0A%09%09\n@@ -379,19 +379,27 @@\n casados \n+== false \n %7B%0A\n-%09\n %09%09s = ap\n@@ -414,20 +414,16 @@\n animal)%0A\n-%09%09%7D%0A\n %09%7D%0A%0A%09fmt\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-27_18-02-01",
+            "content": "@@ -294,20 +294,17 @@\n %7B%0A%09%09%09if \n-s%5Bj%5D\n+j\n  == (ani\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-27_18-02-39",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\n\tvar n int    //numero de animais\n\tfmt.Scan(&n) //\n\t//vamo trabalhar com vetores\n\ts := []int{} //s de solteiros\n\tvar pares int = 0\n\n\tfor i := 0; i < n; i++ {\n\t\tvar animal int\n\t\tfmt.Scan(&animal)\n\n\t\tcasados := false\n\t\tfor j := 0; j < len(s); j++ {\n\t\t\tif s[j] == (animal * (-1)) {\n\t\t\t\ts[j] = 0\n\t\t\t\tcasados = true\n\t\t\t\tpares++\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t\tif !casados {\n\t\t\ts = append(s, animal)\n\t\t}\n\t}\n\n\tfmt.Printf(\"%d\\n\", pares)\n}\n",
+            "lines": "34"
         }
     ]
 }
