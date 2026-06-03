@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@basic
+- ed@vector
 flags:
   inbox: all
   panel: graph
@@ -27,5 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@pedra
+selected: ed@vetbuild
 selected_index: 14

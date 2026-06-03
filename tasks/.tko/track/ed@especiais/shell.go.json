@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_15-56-08",
+            "content": "@@ -670,136 +670,38 @@\n  %7B%0A%09\n-resultado := %5B%5Dint%7B%7D%0A%09for _, value := range vet %7B%0A%09%09if !value %7B%0A%09%09%09resultado = append(resultado, value)%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09_ = value%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-01_16-06-14",
+            "content": "@@ -698,18 +698,18 @@\n r _, val\n-or\n+ue\n  := rang\n@@ -725,17 +725,9 @@\n %09if \n-valor != \n+!\n valu\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-01_16-07-17",
+            "content": "@@ -42,73 +42,8 @@\n os%22%0A\n-%09%22sort%22 //adicionei essa pra facilitar na hora de ordenar o mapa%0A\n %09%22st\n@@ -138,751 +138,29 @@\n ir %7B\n- //Fun%C3%A7%C3%A3o de apari%C3%A7%C3%A3o n%C3%A9, vamo la%0A%09//Primeiro vamos criar um contador%0A%09contagem := map%5Bint%5Dint%7B%7D //o dentro do colchetes %C3%A9 a chave do map.%0A%09for _, v := range vet %7B%0A%09%09stress := v%0A%09%09if stress %3C 0 %7B%0A%09%09%09stress = -stress //isso aqui %C3%A9 pra gente usar s%C3%B3 o valor absoluto%0A%09%09%7D%0A%09%09contagem%5Bstress%5D++ //bacana%0A%09%7D%0A%09//vamo ordenar as chaves desse mapa agr%0A%09chaves := %5B%5Dint%7B%7D //vamo ter que armazenar elas%0A%09for chave := range contagem %7B%0A%09%09chaves = append(chaves, chave)%0A%09%7D%0A%09sort.Ints(chaves)%0A%0A%09//agora vamos montar os Pairs na ordem certinha%0A%09resultado := %5B%5DPair%7B%7D%0A%09for _, chave := range chaves %7B%0A%09%09resultado = append(resultado, Pair%7BOne: chave, Two: contagem%5Bchave%5D%7D) //bagulho bizarro, mas pairs s%C3%A3o bacanas%0A%09%7D%0A%0A%09//Retornando o resultado%0A%09return resultado\n+%0A%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-01_16-27-07",
+            "content": "@@ -980,98 +980,8 @@\n ir %7B\n- //Segunda fun%C3%A7%C3%A3o a ser feita por causa dos testesss. Pelo que vi n%C3%A3o precisa de ordena%C3%A7%C3%A3o\n %0A%09_ \n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-06-01_16-28-06",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\" //adicionei essa pra facilitar na hora de ordenar o mapa\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc occurr(vet []int) []Pair { //Fun\u00e7\u00e3o de apari\u00e7\u00e3o n\u00e9, vamo la\n\t//Primeiro vamos criar um contador\n\tcontagem := map[int]int{} //o dentro do colchetes \u00e9 a chave do map.\n\tfor _, v := range vet {\n\t\tstress := v\n\t\tif stress < 0 {\n\t\t\tstress = -stress //isso aqui \u00e9 pra gente usar s\u00f3 o valor absoluto\n\t\t}\n\t\tcontagem[stress]++ //bacana\n\t}\n\t//vamo ordenar as chaves desse mapa agr\n\tchaves := []int{} //vamo ter que armazenar elas\n\tfor chave := range contagem {\n\t\tchaves = append(chaves, chave)\n\t}\n\tsort.Ints(chaves)\n\n\t//agora vamos montar os Pairs na ordem certinha\n\tresultado := []Pair{}\n\tfor _, chave := range chaves {\n\t\tresultado = append(resultado, Pair{One: chave, Two: contagem[chave]}) //bagulho bizarro, mas pairs s\u00e3o bacanas\n\t}\n\n\t//Retornando o resultado\n\treturn resultado\n}\n\nfunc teams(vet []int) []Pair { //Segunda fun\u00e7\u00e3o a ser feita por causa dos testesss. Pelo que vi n\u00e3o precisa de ordena\u00e7\u00e3o\n\t_ = vet\n\treturn nil\n}\n\nfunc mnext(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc alone(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc couple(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\t_ = vet\n\t_ = posList\n\treturn nil\n}\n\nfunc clear(vet []int, value int) []int {\n\tresultado := []int{}\n\tfor _, valor := range vet {\n\t\tif valor != value {\n\t\t\tresultado = append(resultado, value)\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "159"
+        }
+    ]
+}

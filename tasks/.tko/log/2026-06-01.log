@@ -1,0 +1,69 @@
+2026-06-01 15:54:30, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-06-01 15:54:40, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-01 15:56:08, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:132
+2026-06-01 15:56:14, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-01 15:56:17, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-01 15:56:21, EXEC, v:1, k:ed@especiais, mode:FREE
+2026-06-01 15:58:39, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0
+2026-06-01 15:54:30, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 15:54:30, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 15:54:30, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 16:00:45, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-01 16:00:49, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-01 16:06:00, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100
+2026-06-01 16:06:11, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-01 16:06:13, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-01 16:06:14, EXEC, v:1, k:ed@especiais, mode:FULL, size:136, fail:COMP
+2026-06-01 16:06:15, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-01 16:06:18, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-01 16:06:21, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-06-01 16:07:17, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:136
+2026-06-01 16:08:29, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 16:18:45, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 16:27:07, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:159
+2026-06-01 16:28:06, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:159
+2026-06-01 16:28:07, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-01 16:28:39, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-01 16:28:41, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-01 16:28:46, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-01 16:28:49, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-01 16:28:03, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 16:30:34, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-06-01 16:30:41, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-01 16:31:34, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:5
+2026-06-01 16:29:48, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-01 16:30:34, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-01 16:30:34, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-01 16:30:34, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-01 16:38:03, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-01 16:41:23, EXEC, v:1, k:ed@pedra, mode:FULL, size:28, fail:COMP
+2026-06-01 16:43:35, EXEC, v:1, k:ed@pedra, mode:FULL, size:32, fail:COMP
+2026-06-01 16:43:32, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-01 16:44:14, EXEC, v:1, k:ed@pedra, mode:FULL, size:33, fail:COMP
+2026-06-01 16:44:45, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:35
+2026-06-01 16:44:47, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-01 16:45:06, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-01 16:45:18, SELF, v:1, k:ed@pedra, self:1, rate:100, study:20
+2026-06-01 16:45:19, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-01 16:45:39, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-01 16:45:45, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-01 16:46:02, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-01 16:46:04, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-06-01 16:46:09, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-01 16:46:18, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-06-01 16:46:19, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-06-01 16:46:20, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-01 16:46:34, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-06-01 16:47:55, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:42
+2026-06-01 16:48:17, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:41
+2026-06-01 16:44:41, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-01 16:48:13, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-06-01 16:51:50, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:48
+2026-06-01 16:53:48, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-06-01 16:56:01, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:57
+2026-06-01 16:56:16, SELF, v:1, k:ed@baruel, self:1, rate:100, study:18
+2026-06-01 16:56:18, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-01 16:56:23, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-06-01 16:56:32, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-06-01 16:57:21, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-06-01 16:55:58, MOVE, v:1, k:ed@baruel, mode:EDIT

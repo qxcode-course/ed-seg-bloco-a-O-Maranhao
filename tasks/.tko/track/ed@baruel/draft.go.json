@@ -52,8 +52,28 @@
         },
         {
             "label": "2026-03-17_16-39-51",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_album := 0\n\tqtd_fig := 0\n\tfmt.Scan(&qtd_album, &qtd_fig)\n\talbum := make([]int, qtd_fig) //criei um vetor que \u00e9 o tamanho das figurinhas q cada album tem\n\tunicos := make(map[int]bool)  //criando um mapa\n\trepetidos := make([]int, 0, qtd_fig)\n\tfor i := range album { //for do tamanho do album\n\t\tfmt.Scan(&album[i])\n\t}\n\tfor _, fig := range album { //para cada figurinha no album\n\t\tif unicos[fig] {\n\t\t\trepetidos = append(repetidos, fig) //se meu mapa de unicos j\u00e1 possui essa figurinha, bota nos repetidos\n\t\t} else {\n\t\t\tunicos[fig] = true\n\t\t}\n\t}\n\tif len(repetidos) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, valor := range repetidos {\n\t\t\tif i != 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Printf(\"%v\", valor)\n\t\t}\n\t}\n\tfmt.Println(\"\") //criar um vetor de saida aqui ou coisa do tipo sla\n\tfor i := 1; i <= qtd_album; i++ {\n\t\tif !unicos[i] {\n\t\t\tfmt.Printf(\"%v\", i)\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}\n\tfmt.Print(\"\\n\")\n\n}\n",
+            "content": "@@ -89,20 +89,10 @@\n lbum\n-)%0A%09fmt.Scan(\n+, \n &qtd\n",
             "lines": "41"
+        },
+        {
+            "label": "2026-06-01_16-47-55",
+            "content": "@@ -900,16 +900,35 @@\n %25v%22, i)%0A\n+%09%09%09fmt.Printf(%22 %22)%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-01_16-48-17",
+            "content": "@@ -365,17 +365,16 @@\n %5Bi%5D)%0A%09%7D%0A\n-%0A\n %09for _, \n@@ -596,36 +596,30 @@\n %09%7D%0A%09\n-faltou := false%0A%0A%09if !faltou\n+if len(repetidos) == 0\n  %7B%0A%09\n@@ -881,47 +881,8 @@\n %5D %7B%0A\n-%09%09%09if faltou %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A\n %09%09%09f\n@@ -904,25 +904,8 @@\n  i)%0A\n-%09%09%09faltou = true%0A\n %09%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-01_16-51-50",
+            "content": "@@ -107,17 +107,16 @@\n td_fig)%0A\n-%0A\n %09album :\n@@ -290,17 +290,16 @@\n td_fig)%0A\n-%0A\n %09for i :\n@@ -596,68 +596,37 @@\n %0A%09%7D%0A\n-%0A%09//Primeira linha %C3%A9 pras repetidas.%0A%09if len(repetidos) == 0\n+%09faltou := false%0A%0A%09if !faltou\n  %7B%0A%09\n@@ -760,16 +760,18 @@\n r)%0A%09%09%7D%0A%09\n+%7D%0A\n %09fmt.Pri\n@@ -779,46 +779,63 @@\n tln(\n+%22%22\n ) //\n-s%C3%B3 pra quebra%0A%09%7D%0A%0A%09faltou := false\n+criar um vetor de saida aqui ou coisa do tipo sla\n %0A%09fo\n@@ -974,70 +974,24 @@\n %0A%09%7D%0A\n-%0A%09if !faltou %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09fmt.Println()%0A%09%7D\n+%09fmt.Print(%22%5Cn%22)\n %0A%0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-01_16-56-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd_album := 0\n\tqtd_fig := 0\n\tfmt.Scan(&qtd_album)\n\tfmt.Scan(&qtd_fig)\n\n\talbum := make([]int, qtd_fig) //criei um vetor que \u00e9 o tamanho das figurinhas q cada album tem\n\tunicos := make(map[int]bool)  //criando um mapa\n\trepetidos := make([]int, 0, qtd_fig)\n\n\tfor i := range album { //for do tamanho do album\n\t\tfmt.Scan(&album[i])\n\t}\n\n\tfor _, fig := range album { //para cada figurinha no album\n\t\tif unicos[fig] {\n\t\t\trepetidos = append(repetidos, fig) //se meu mapa de unicos j\u00e1 possui essa figurinha, bota nos repetidos\n\t\t} else {\n\t\t\tunicos[fig] = true\n\t\t}\n\t}\n\n\t//Primeira linha \u00e9 pras repetidas.\n\tif len(repetidos) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, valor := range repetidos {\n\t\t\tif i != 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Printf(\"%v\", valor)\n\t\t}\n\t\tfmt.Println() //s\u00f3 pra quebra\n\t}\n\n\tfaltou := false\n\tfor i := 1; i <= qtd_album; i++ {\n\t\tif !unicos[i] {\n\t\t\tif faltou {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Printf(\"%v\", i)\n\t\t\tfaltou = true\n\t\t}\n\t}\n\n\tif !faltou {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println()\n\t}\n\n}\n",
+            "lines": "57"
         }
     ]
 }
