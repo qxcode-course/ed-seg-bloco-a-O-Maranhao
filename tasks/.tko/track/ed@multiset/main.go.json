@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-04_23-24-01",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -168,28 +168,16 @@\n ultiSet(\n-capacity int\n ) *Multi\n@@ -254,24 +254,18 @@\n (%5B%5Dint, \n-capacity\n+10\n ),%0A%09%09siz\n@@ -286,24 +286,18 @@\n pacity: \n-capacity\n+10\n ,%0A%09%7D%0A%7D%0A%0A\n@@ -976,56 +976,8 @@\n -- %7B\n- //botei m.size-1 mas ai perde o %C3%BAltimo elemento\n %0A%09%09m\n@@ -1331,16 +1331,19 @@\n Stdin)%0A%09\n+// \n ms := Ne\n@@ -1352,16 +1352,17 @@\n ultiSet(\n+0\n )%0A%0A%09for \n@@ -1582,16 +1582,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -1622,16 +1622,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n ms = New\n@@ -1669,16 +1669,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1707,16 +1707,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1749,64 +1749,27 @@\n %0A%09%09%09\n-%09ms.Insert(value)%0A%09%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Println(ms)\n+// %7D%0A%09%09case %22show%22:\n %0A%09%09c\n@@ -1786,16 +1786,17 @@\n %22:%0A%09%09%09//\n+ \n value, _\n@@ -1825,30 +1825,8 @@\n 1%5D)%0A\n-%09%09%09// ms.Erase(value)%0A\n %09%09ca\n@@ -1884,33 +1884,8 @@\n 1%5D)%0A\n-%09%09%09// ms.Contains(value)%0A\n %09%09ca\n@@ -1940,14 +1940,8 @@\n 1%5D)%0A\n-%09%09%09//%0A\n %09%09ca\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-06-04_23-26-34",
+            "content": "@@ -1436,116 +1436,9 @@\n Set(\n-1) // botei 0 mas n%C3%A3o rodoukk, talvez pq o reserve multiplica por 2 e 2x0 %C3%A9 0, ent%C3%A3o botei 1 de valor m%C3%ADnimo\n+)\n %0A%0A%09f\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-04_23-28-29",
+            "content": "@@ -1123,647 +1123,8 @@\n %0A%7D%0A%0A\n-// Search%0Afunc (m *MultiSet) Search(value int) (bool, int) %7B%0A%09low := 0%0A%09high := m.size%0A%09for low %3C high %7B%0A%09%09middle := (high + low) / 2%0A%09%09if m.data%5Bmiddle%5D %3C= value %7B%0A%09%09%09low = middle + 1 //se for menor ou igual, o low vira o meio mais um, encurta a pesquisa%0A%09%09%7D else if m.data%5Bmiddle%5D %3E value %7B%0A%09%09%09high = middle //que nem na ultima tarefa%0A%09%09%7D%0A%09%7D%0A%09pos := low - 1 //apontando pra %C3%BAltima ocorr%C3%AAncia, pq o low aponta normalmente pra depois dela n%C3%A9 (middle +1)%0A%09if pos %3E= 0 && m.data%5Bpos%5D == value %7B%0A%09%09return true, pos%0A%09%7D%0A%09return false, low //n%C3%A3o achou, retorna a %C3%BAltima posi%C3%A7%C3%A3o de isner%C3%A7%C3%A3o%0A%7D%0A%0A// Contains%0Afunc (m *MultiSet) Contains(valeu int)%0A%0A\n func\n@@ -1544,58 +1544,8 @@\n nimo\n-, no caso quando %C3%A9 0 ele s%C3%B3 fica rodando ad eterno\n %0A%0A%09f\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-04_23-33-59",
+            "content": "@@ -1753,131 +1753,15 @@\n (val\n-ue int) bool %7B%0A%09found, _ := m.Search(value) //demorei pra lembrar sobre usar o _ pra ignorar uma respostakk%0A%09return found%0A%7D\n+eu int)\n %0A%0Afu\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-06-04_23-36-12",
+            "content": "@@ -1618,69 +1618,27 @@\n %7B%0A%09%09\n-fmt.Println(true)%0A%09%09return true, pos%0A%09%7D%0A%09fmt.Println(%22false%22)\n+return true, pos%0A%09%7D\n %0A%09re\n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-06-04_23-36-46",
+            "content": "@@ -1630,14 +1630,12 @@\n tln(\n-%22\n true\n-%22\n )%0A%09%09\n@@ -2918,24 +2918,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2962,16 +2962,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n ms.Conta\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-04_23-37-11",
+            "content": "@@ -1123,228 +1123,8 @@\n %0A%7D%0A%0A\n-// ERASE perto do insert pq %C3%A9 o contr%C3%A1rio%0Afunc (m *MultiSet) Erase(value int) %7B%0A%09pos := 0%0A%09for pos %3C m.size && m.data%5Bpos%5D %3C= value %7B%0A%09%09pos++%0A%09%7D%0A%09for i := pos; i %3C m.size; i++ %7B%0A%09%09m.data%5Bi%5D = m.data%5Bi+1%5D%0A%09%7D%0A%09m.size--%0A%7D%0A%0A\n // S\n@@ -2840,24 +2840,26 @@\n %22erase%22:%0A%09%09%09\n+//\n value, _ := \n@@ -2883,16 +2883,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n ms.Erase\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-04_23-39-40",
+            "content": "@@ -1243,16 +1243,17 @@\n a%5Bpos%5D %3C\n+=\n  value %7B\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-06-04_23-40-08",
+            "content": "@@ -1203,33 +1203,8 @@\n ) %7B%0A\n-%09if m.Contains(value) %7B%0A%09\n %09pos\n@@ -1209,17 +1209,16 @@\n os := 0%0A\n-%09\n %09for pos\n@@ -1258,20 +1258,17 @@\n %7B%0A%09%09\n-%09\n pos++%0A\n-%09\n %09%7D%0A\n-%09\n %09for\n@@ -1298,17 +1298,16 @@\n i++ %7B%0A%09%09\n-%09\n m.data%5Bi\n@@ -1322,21 +1322,19 @@\n ta%5Bi+1%5D%0A\n-%09\n %09%7D%0A\n-%09\n %09m.size-\n@@ -1339,52 +1339,8 @@\n e--%0A\n-%09%09return%0A%09%7D%0A%09fmt.Println(%22value not found%22)%0A\n %7D%0A%0A/\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-06-04_23-41-52",
+            "content": "@@ -1204,45 +1204,28 @@\n  %7B%0A%09\n-found, _ := m.Search(value)%0A%09if found\n+if m.Contains(value)\n  %7B%0A%09\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-06-04_23-42-31",
+            "content": "@@ -2218,107 +2218,20 @@\n kk%0A%09\n-if !found %7B%0A%09%09fmt.Println(%22true%22)%0A%09%09return found%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%09return found%0A%09%7D\n+return found\n %0A%7D%0A%0A\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-06-04_23-46-22",
+            "content": "@@ -1930,27 +1930,71 @@\n %7B%0A%09%09\n-return true, pos%0A%09%7D\n+fmt.Println(%22true%22)%0A%09%09return true, pos%0A%09%7D%0A%09fmt.Println(%22false%22)\n %0A%09re\n",
+            "lines": "169"
+        },
+        {
+            "label": "2026-06-04_23-46-55",
+            "content": "@@ -2197,20 +2197,19 @@\n rintln(%22\n-fals\n+tru\n e%22)%0A%09%09re\n@@ -2236,35 +2236,36 @@\n %0A%09%09fmt.Println(%22\n-tru\n+fals\n e%22)%0A%09%09return fou\n",
+            "lines": "167"
+        },
+        {
+            "label": "2026-06-04_23-47-13",
+            "content": "@@ -2277,314 +2277,8 @@\n %0A%7D%0A%0A\n-// Count%0Afunc (m *MultiSet) Count(value int) int %7B%0A%09found, pos := m.Search(value)%0A%09if !found %7B%0A%09%09return 0 //se n achou, n tem%0A%09%7D%0A%09//contador%0A%09contador := 0%0A%09for i := pos; i %3E= 0 && m.data%5Bi%5D == value; i-- %7B //come%C3%A7a da ultima ocorrencia e vai enquanto o valor for igual%0A%09%09contador++%0A%09%7D%0A%0A%09return contador%0A%7D%0A\n func\n",
+            "lines": "167"
+        },
+        {
+            "label": "2026-06-04_23-52-36",
+            "content": "@@ -3651,24 +3651,27 @@\n %22count%22:%0A%09%09%09\n+// \n value, _ := \n@@ -3699,23 +3699,10 @@\n %0A%09%09%09\n-ms.Count(value)\n+//\n %0A%09%09c\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-04_23-52-57",
+            "content": "@@ -3692,28 +3692,16 @@\n %5B1%5D)%0A%09%09%09\n-fmt.Println(\n ms.Count\n@@ -3707,17 +3707,16 @@\n t(value)\n-)\n %0A%09%09case \n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-04_23-53-40",
+            "content": "@@ -2582,203 +2582,8 @@\n or%0A%7D\n-%0A%0A// Unique%0Afunc (m *MultiSet) Unique() int %7B%0A%09if m.size == 0 %7B%0A%09%09return 0%0A%09%7D%0A%09contador := 1%0A%09for i := 0; i %3C m.size; i++ %7B%0A%09%09if m.data%5Bi%5D != m.data%5Bi+1%5D %7B%0A%09%09%09contador++%0A%09%09%7D%0A%09%7D%0A%09return contador%0A%7D\n %0Afun\n@@ -2802,52 +2802,8 @@\n %0A%7D%0A%0A\n-func (m *MultiSet) Clear() %7B%0A%09m.size = 0%0A%7D%0A%0A\n func\n@@ -3744,63 +3744,21 @@\n :%0A%09%09\n-%09fmt.Println(ms.Unique())%0A%09%09case %22clear%22:%0A%09%09%09ms.Clear()\n+case %22clear%22:\n %0A%09%09d\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-04_23-57-45",
+            "content": "@@ -2728,17 +2728,17 @@\n m.data%5Bi\n--\n++\n 1%5D %7B%0A%09%09%09\n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-04_23-59-23",
+            "content": "@@ -1334,18 +1334,16 @@\n %3C m.size\n--1\n ; i++ %7B%0A\n@@ -2681,17 +2681,17 @@\n or i := \n-1\n+0\n ; i %3C m.\n@@ -2705,106 +2705,8 @@\n ++ %7B\n- //come%C3%A7ando do 1, comecei do 0 e comparava se era igual o pr%C3%B3ximo, mas a%C3%AD tava fora dos limiteskk\n %0A%09%09i\n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-05_00-01-55",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype MultiSet struct { //padrao das outras questoes\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewMultiSet(capacity int) *MultiSet { //padrao das outras questoes\n\treturn &MultiSet{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\n// STRING\nfunc (m *MultiSet) String() string { //vamo fazendo as coisas que parecem serem iguais\n\tres := \"[\"\n\tfor i := 0; i < m.size; i++ {\n\t\tif i > 0 {\n\t\t\tres += \", \"\n\t\t}\n\t\tres += fmt.Sprintf(\"%d\", m.data[i])\n\t}\n\tres += \"]\"\n\treturn res\n}\n\n// Reserve\nfunc (m *MultiSet) Reserve(newCap int) {\n\tnovoData := make([]int, newCap)\n\tfor i := 0; i < m.size; i++ {\n\t\tnovoData[i] = m.data[i]\n\t}\n\tm.data = novoData\n\tm.capacity = newCap\n}\n\n// INSERT\nfunc (m *MultiSet) Insert(value int) {\n\tif m.size == m.capacity {\n\t\tm.Reserve(2 * m.capacity)\n\t}\n\t//vamo meter tipo o binary search aqui tbm\n\tpos := 0\n\tfor pos < m.size && m.data[pos] <= value {\n\t\tpos++\n\t}\n\tfor i := m.size; i > pos; i-- { //botei m.size-1 mas ai perde o \u00faltimo elemento\n\t\tm.data[i] = m.data[i-1]\n\t}\n\tm.data[pos] = value\n\tm.size++\n}\n\n// ERASE perto do insert pq \u00e9 o contr\u00e1rio\nfunc (m *MultiSet) Erase(value int) {\n\tfound, _ := m.Search(value)\n\tif found {\n\t\tpos := 0\n\t\tfor pos < m.size && m.data[pos] < value {\n\t\t\tpos++\n\t\t}\n\t\tfor i := pos; i < m.size-1; i++ {\n\t\t\tm.data[i] = m.data[i+1]\n\t\t}\n\t\tm.size--\n\t\treturn\n\t}\n\tfmt.Println(\"value not found\")\n}\n\n// Search\nfunc (m *MultiSet) Search(value int) (bool, int) {\n\tlow := 0\n\thigh := m.size\n\tfor low < high {\n\t\tmiddle := (high + low) / 2\n\t\tif m.data[middle] <= value {\n\t\t\tlow = middle + 1 //se for menor ou igual, o low vira o meio mais um, encurta a pesquisa\n\t\t} else if m.data[middle] > value {\n\t\t\thigh = middle //que nem na ultima tarefa\n\t\t}\n\t}\n\tpos := low - 1 //apontando pra \u00faltima ocorr\u00eancia, pq o low aponta normalmente pra depois dela n\u00e9 (middle +1)\n\tif pos >= 0 && m.data[pos] == value {\n\t\treturn true, pos\n\t}\n\treturn false, low //n\u00e3o achou, retorna a \u00faltima posi\u00e7\u00e3o de isner\u00e7\u00e3o\n}\n\n// Contains\nfunc (m *MultiSet) Contains(value int) bool {\n\tfound, _ := m.Search(value) //demorei pra lembrar sobre usar o _ pra ignorar uma respostakk\n\tif !found {\n\t\tfmt.Println(\"false\")\n\t\treturn found\n\t} else {\n\t\tfmt.Println(\"true\")\n\t\treturn found\n\t}\n}\n\n// Count\nfunc (m *MultiSet) Count(value int) int {\n\tfound, pos := m.Search(value)\n\tif !found {\n\t\treturn 0 //se n achou, n tem\n\t}\n\t//contador\n\tcontador := 0\n\tfor i := pos; i >= 0 && m.data[i] == value; i-- { //come\u00e7a da ultima ocorrencia e vai enquanto o valor for igual\n\t\tcontador++\n\t}\n\n\treturn contador\n}\n\n// Unique\nfunc (m *MultiSet) Unique() int {\n\tif m.size == 0 {\n\t\treturn 0\n\t}\n\tcontador := 1\n\tfor i := 1; i < m.size; i++ { //come\u00e7ando do 1, comecei do 0 e comparava se era igual o pr\u00f3ximo, mas a\u00ed tava fora dos limiteskk\n\t\tif m.data[i] != m.data[i-1] {\n\t\t\tcontador++\n\t\t}\n\t}\n\treturn contador\n}\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc (m *MultiSet) Clear() {\n\tm.size = 0\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(1) // botei 0 mas n\u00e3o rodoukk, talvez pq o reserve multiplica por 2 e 2x0 \u00e9 0, ent\u00e3o botei 1 de valor m\u00ednimo, no caso quando \u00e9 0 ele s\u00f3 fica rodando ad eterno\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms)\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms.Erase(value)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms.Contains(value)\n\t\tcase \"count\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Println(ms.Count(value))\n\t\tcase \"unique\":\n\t\t\tfmt.Println(ms.Unique())\n\t\tcase \"clear\":\n\t\t\tms.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "201"
+        }
+    ]
+}

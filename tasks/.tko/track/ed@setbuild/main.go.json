@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-04_22-37-37",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -1863,16 +1863,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -1904,16 +1904,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewS\n@@ -1945,16 +1945,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1984,16 +1984,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -2022,16 +2022,19 @@\n art)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-04_22-40-33",
+            "content": "@@ -1554,47 +1554,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Clear() %7B%0A%09s.size = 0%0A%7D%0A%0A\n func\n@@ -1564,16 +1564,16 @@\n ain() %7B%0A\n+\n %09var lin\n@@ -1627,16 +1627,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n@@ -1642,16 +1642,17 @@\n  NewSet(\n+0\n )%0A%09for s\n@@ -1871,16 +1871,54 @@\n %22init%22:%0A\n+%09%09%09value, _ := strconv.Atoi(parts%5B1%5D)%0A\n %09%09%09v = N\n@@ -1923,16 +1923,21 @@\n  NewSet(\n+value\n )%0A%09%09case\n@@ -2022,28 +2022,8 @@\n rt)%0A\n-%09%09%09%09v.Insert(value)%0A\n %09%09%09%7D\n@@ -2042,26 +2042,8 @@\n w%22:%0A\n-%09%09%09fmt.Println(v)%0A\n %09%09ca\n@@ -2147,32 +2147,32 @@\n .Atoi(parts%5B1%5D)%0A\n+\n %09%09case %22clear%22:%0A\n@@ -2175,21 +2175,8 @@\n r%22:%0A\n-%09%09%09v.Clear()%0A\n %09%09de\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-04_22-45-09",
+            "content": "@@ -559,20 +559,8 @@\n %0A%09%7D%0A\n-%09res += %22%5D%22%0A\n %09ret\n@@ -1120,20 +1120,8 @@\n n -1\n- //n%C3%A3o achou\n %0A%7D%0A%0A\n@@ -1190,18 +1190,16 @@\n  -1 %7B%0A%09%09\n-//\n fmt.Prin\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-04_22-46-03",
+            "content": "@@ -1617,116 +1617,8 @@\n  0%0A%7D\n-%0Afunc (s *Set) Contains(value int) bool %7B%0A%09if s.BinarySearch(value) == -1 %7B%0A%09%09return false%0A%09%7D%0A%09return true%0A%7D\n %0A%0Afu\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-04_22-47-14",
+            "content": "@@ -1695,67 +1695,23 @@\n %7B%0A%09%09\n-fmt.Println(%22false%22)%0A%09%09return false%0A%09%7D%0A%09fmt.Println(%22true%22)\n+return false%0A%09%7D\n %0A%09re\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-04_22-48-19",
+            "content": "@@ -2325,16 +2325,19 @@\n ns%22:%0A%09%09%09\n+// \n value, _\n@@ -2367,29 +2367,8 @@\n 1%5D)%0A\n-%09%09%09v.Contains(value)%0A\n %09%09ca\n",
+            "lines": "134"
+        },
+        {
+            "label": "2026-06-04_22-48-48",
+            "content": "@@ -1771,146 +1771,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Erase(value int) %7B%0A%09pos := s.BinarySearch(value)%0A%09for i := pos; i %3C s.size; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%09s.size--%0A%7D%0A%0A\n func\n@@ -2261,24 +2261,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2307,26 +2307,8 @@\n 1%5D)%0A\n-%09%09%09v.Erase(value)%0A\n %09%09ca\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-06-04_22-51-33",
+            "content": "@@ -1834,25 +1834,8 @@\n ue)%0A\n-%09if pos != -1 %7B%0A%09\n %09for\n@@ -1863,17 +1863,16 @@\n ; i++ %7B%0A\n-%09\n %09%09s.data\n@@ -1889,21 +1889,19 @@\n ta%5Bi+1%5D%0A\n-%09\n %09%7D%0A\n-%09\n %09s.size-\n@@ -1902,19 +1902,16 @@\n .size--%0A\n-%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-06-04_22-51-58",
+            "content": "@@ -1793,29 +1793,24 @@\n e(value int)\n- bool\n  %7B%0A%09pos := s\n@@ -1926,80 +1926,8 @@\n e--%0A\n-%09%09return true%0A%09%7D else %7B%0A%09%09fmt.Println(%22value not found%22)%0A%09%09return false%0A\n %09%7D%0A%7D\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-06-04_22-53-21",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Set struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewSet() *Set {\n\treturn &Set{\n\t\tdata:     make([]int, 10),\n\t\tsize:     0,\n\t\tcapacity: 10,\n\t}\n}\n\nfunc (s *Set) Reserve(capacity int) {\n\tnovoData := make([]int, capacity)\n\tfor i := 0; i < s.size; i++ {\n\t\tnovoData[i] = s.data[i]\n\t}\n\ts.data = novoData\n\ts.capacity = capacity\n}\n\nfunc (s *Set) String() string {\n\tres := \"[\"\n\tfor i := 0; i < s.size; i++ {\n\t\tif i > 0 {\n\t\t\tres += \", \"\n\t\t}\n\t\tres += fmt.Sprintf(\"%d\", s.data[i])\n\t}\n\tres += \"]\"\n\treturn res\n}\n\nfunc (s *Set) BinarySearch(value int) int { //come\u00e7a do meio, vamo indo pra direita ou esquerda at\u00e9 achar o valor\n\tinicio := 0\n\tfim := s.size - 1\n\tfor inicio <= fim { //ok, essa aqui demorou pra descobrir e sacar\n\t\tmeio := (inicio + fim) / 2\n\t\tif s.data[meio] == value {\n\t\t\treturn meio //se o cara der exatamente o valor da meiokkk\n\t\t} else if s.data[meio] < value { //se estivermos num valor mais baixo vamos pra direita\n\t\t\tinicio = meio + 1 //assim j\u00e1 filtra bem\n\t\t} else if s.data[meio] > value {\n\t\t\tfim = meio - 1 //cortemo\n\t\t}\n\t}\n\n\treturn -1 //n\u00e3o achou\n}\n\nfunc (s *Set) Insert(value int) {\n\tif s.BinarySearch(value) != -1 {\n\t\t//fmt.Printf(\"valor ja inserido bro\\n\")\n\t\treturn\n\t}\n\tif s.size == s.capacity {\n\t\ts.Reserve(2 * s.capacity)\n\t}\n\n\tpos := 0\n\tfor pos < s.size && s.data[pos] < value { //s\u00f3 para quando encontrar um elemento maior que esse valor\n\t\tpos++ //assim sabemos onde inserir\n\t}\n\n\tfor i := s.size; i > pos; i-- {\n\t\ts.data[i] = s.data[i-1]\n\t}\n\ts.data[pos] = value\n\ts.size++\n\n}\n\nfunc (s *Set) Clear() {\n\ts.size = 0\n}\nfunc (s *Set) Contains(value int) bool {\n\tif s.BinarySearch(value) == -1 {\n\t\tfmt.Println(\"false\")\n\t\treturn false\n\t}\n\tfmt.Println(\"true\")\n\treturn true\n}\n\nfunc (s *Set) Erase(value int) bool {\n\tpos := s.BinarySearch(value)\n\tif pos != -1 {\n\t\tfor i := pos; i < s.size; i++ {\n\t\t\ts.data[i] = s.data[i+1]\n\t\t}\n\t\ts.size--\n\t\treturn true\n\t} else {\n\t\tfmt.Println(\"value not found\")\n\t\treturn false\n\t}\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet()\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tv = NewSet()\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(v)\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv.Erase(value)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv.Contains(value)\n\t\tcase \"clear\":\n\t\t\tv.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "150"
+        }
+    ]
+}
