@@ -19,8 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@dfs
+- ed@linear
 flags:
   inbox: all
   panel: graph
@@ -28,5 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d4
-selected_index: 18
+selected: ed@bufferring
+selected_index: 15
