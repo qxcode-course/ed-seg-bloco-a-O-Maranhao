@@ -20,6 +20,7 @@ sources:
   quests: null
 expanded:
 - ed@list
+- ed@dfs
 flags:
   inbox: all
   panel: graph

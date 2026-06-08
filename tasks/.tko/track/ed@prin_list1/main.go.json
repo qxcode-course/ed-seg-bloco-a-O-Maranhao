@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_21-46-57",
+            "content": "@@ -360,17 +360,16 @@\n intf(%22%25d\n- \n %22, n.Val\n@@ -384,20 +384,8 @@\n %0A%09%7D%0A\n-%09res += %22%5D%22%0A\n %09ret\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-07_21-47-11",
+            "content": "@@ -216,17 +216,16 @@\n res := %22\n- \n %5B%22%0A%09for \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-07_21-47-32",
+            "content": "@@ -220,10 +220,10 @@\n := %22\n-%5B\n  \n+%5B\n %22%0A%09f\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-07_21-47-38",
+            "content": "@@ -700,18 +700,16 @@\n hosen)%0A%09\n-//\n fmt.Prin\n@@ -728,36 +728,8 @@\n sen)\n- isso aqui tava atrapalhando\n %0A%09l \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-07_21-49-35",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\t//parece que s\u00f3 precisamos implementar duas fun\u00e7\u00f5es\n\t//aqui percorre a lista\n\tres := \"[ \"\n\tfor n := l.Front(); n != l.End(); n = n.next {\n\t\tif n == sword {\n\t\t\tres += fmt.Sprintf(\"%d> \", n.Value)\n\t\t} else {\n\t\t\tres += fmt.Sprintf(\"%d \", n.Value)\n\t\t}\n\n\t}\n\tres += \"]\"\n\treturn res\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\t//aqui \u00e9 s\u00f3 dizer que quando chegar no fim \u00e9 pra voltar do in\u00edcio\n\tif it.Next() == l.End() {\n\t\treturn l.Front()\n\t}\n\treturn it.Next()\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\t//fmt.Println(qtd, chosen) isso aqui tava atrapalhando\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "51"
+        }
+    ]
+}
