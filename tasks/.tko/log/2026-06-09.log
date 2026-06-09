@@ -1,0 +1,6 @@
+2026-06-09 16:30:38, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-09 16:30:40, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:186
+2026-06-09 16:30:41, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-09 16:30:53, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:50
+2026-06-09 16:37:45, SELF, v:1, k:ed@editorint, self:1, rate:100, study:70
+2026-06-09 16:37:54, SELF, v:1, k:ed@editorint, self:1, rate:100, study:100

@@ -19,13 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
+- ed@vector
+- ed@list
+- ed@rec
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'false'
+  panel: skills
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@bufferring
-selected_index: 15
+selected: ed@editorint
+selected_index: 47
