@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_23-04-52",
+            "content": "@@ -11,111 +11,8 @@\n in%0A%0A\n-//parte boa de estar atrasado %C3%A9 que vi esse conte%C3%BAdo junto com SO, ent%C3%A3o to sabendo do que %C3%A9 uma pilha%0A\n impo\n@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -99,195 +99,8 @@\n %0A// \n-Fun%C3%A7%C3%A3o top de criar novo Stack%0Afunc NewStack%5BT any%5D(cap int) *Stack%5BT%5D %7B // pilhas guardam qualquer tipo de dado%0A%09return &Stack%5BT%5D%7Bdata: make(%5B%5DT, 0, cap)%7D //tamanho 0, capacidade cap%0A%7D%0A%0A\n func\n@@ -132,16 +132,19 @@\n tring %7B%0A\n+// \n %09output \n@@ -149,16 +149,19 @@\n t := %22%22%0A\n+// \n %09for i :\n@@ -182,16 +182,19 @@\n data) %7B%0A\n+// \n %09%09if i !\n@@ -199,16 +199,19 @@\n  != 0 %7B%0A\n+// \n %09%09%09outpu\n@@ -220,20 +220,26 @@\n += %22, %22%0A\n+// \n %09%09%7D%0A\n+// \n %09%09if i %3C\n@@ -253,16 +253,19 @@\n data) %7B%0A\n+// \n %09%09%09outpu\n@@ -298,16 +298,19 @@\n ata%5Bi%5D)%0A\n+// \n %09%09%7D else\n@@ -312,16 +312,19 @@\n  else %7B%0A\n+// \n %09%09%09outpu\n@@ -332,23 +332,32 @@\n  += %22_%22%0A\n+// \n %09%09%7D%0A\n-%09%7D%0A\n+// %09%7D%0A// \n %09return \n@@ -367,123 +367,16 @@\n put%0A\n-%7D%0A%0A// fun%C3%A7%C3%A3o de Push%0Afunc (s *Stack%5BT%5D) Push(value T) %7B%0A%09s.data = append(s.data, value) //gra%C3%A7as a deus t%C3%A1 facil%0A%7D%0A\n+// %7D%0A// \n %0Afun\n@@ -449,16 +449,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n@@ -725,16 +725,19 @@\n it%22:%0A%09%09%09\n+// \n cap, _ :\n@@ -764,16 +764,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewS\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-10_23-14-32",
+            "content": "@@ -1171,16 +1171,19 @@\n sh%22:%0A%09%09%09\n+// \n for _, p\n@@ -1210,16 +1210,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1248,16 +1248,19 @@\n art)%0A%09%09%09\n+// \n %09v.Push(\n@@ -1269,16 +1269,19 @@\n lue)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-10_23-14-42",
+            "content": "@@ -1277,24 +1277,27 @@\n %22debug%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-10_23-14-49",
+            "content": "@@ -746,122 +746,9 @@\n il%0A%7D\n- //deu bom%0A// Fun%C3%A7%C3%A3o de Size pq acho que vai ser simples tbm%0Afunc (s *Stack%5BT%5D) Size() int %7B%0A%09return len(s.data)%0A%7D\n+%0A\n %0Afun\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-10_23-16-23",
+            "content": "@@ -858,145 +858,8 @@\n ata)\n- //acho que %C3%A9 s%C3%B3 isso msm%0A%7D%0A%0A// Fn%C3%A7%C3%A3o de Clear%0Afunc (s *Stack%5BT%5D) Clear() %7B%0A%09s.data = s.data%5B0:%5D //come%C3%A7ando do 0 e terminando do 0 mesmo\n %0A%7D%0Af\n@@ -1557,24 +1557,27 @@\n  %22size%22:%0A%09%09%09\n+// \n fmt.Println(\n@@ -1694,16 +1694,19 @@\n ar%22:%0A%09%09%09\n+// \n v.Clear(\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-10_23-18-05",
+            "content": "@@ -951,10 +951,10 @@\n ata%5B\n-:\n 0\n+:\n %5D //\n@@ -995,86 +995,10 @@\n esmo\n-, botei antes 0: mas vi q ai n fazia muito sentido%0A%7D //tem q ter no m%C3%A1ximo o 0\n+%0A%7D\n %0Afun\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-06-10_23-18-38",
+            "content": "@@ -1074,440 +1074,8 @@\n o 0%0A\n-%0A// Fun%C3%A7%C3%A3o Top, s%C3%B3 retornar o %C3%BAltimo%0Afunc (s *Stack%5BT%5D) Peek() (T, error) %7B%0A%09if len(s.data) == 0 %7B%0A%09%09var zero T                                     // na quest%C3%A3o anterior, de encadeada, tive que fazer isso tbm pois tipo gen%C3%A9rico %C3%A9 foda, GO n%C3%A3o retorna nil pra tipos gen%C3%A9ricos%0A%09%09return zero, fmt.Errorf(%22pode nao meu patrao%22) //se tiver vazio%0A%09%7D%0A%09return s.data%5Blen(s.data)-1%5D, nil // aquela conta estranha %C3%A9 pra retornar o %C3%BAltimo%0A%7D%0A%0A\n func\n@@ -1639,16 +1639,19 @@\n op%22:%0A%09%09%09\n+// \n top, err\n@@ -1666,16 +1666,19 @@\n ek()%0A%09%09%09\n+// \n if err !\n@@ -1684,24 +1684,27 @@\n != nil %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -1712,16 +1712,19 @@\n err)%0A%09%09%09\n+// \n %7D else %7B\n@@ -1727,16 +1727,19 @@\n se %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1747,24 +1747,27 @@\n tln(top)%0A%09%09%09\n+// \n %7D%0A%09%09case %22si\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-06-10_23-22-42",
+            "content": "@@ -1213,16 +1213,21 @@\n         \n+     \n // na qu\n@@ -1377,22 +1377,27 @@\n rf(%22\n-stack is empty\n+pode nao meu patrao\n %22) /\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-06-10_23-22-55",
+            "content": "@@ -1496,220 +1496,8 @@\n %0A%7D%0A%0A\n-func (s *Stack%5BT%5D) Pop() error %7B // aqui %C3%A9 s%C3%B3 pra remover%0A%09if len(s.data) == 0 %7B%0A%09%09return fmt.Errorf(%22stack is empty%22)%0A%09%7D%0A%09s.data = s.data%5B:len(s.data)-1%5D //s%C3%B3 quero ver os valores at%C3%A9 o pen%C3%BAltimo%0A%09return nil%0A%7D%0A%0A\n func\n@@ -2217,16 +2217,19 @@\n op%22:%0A%09%09%09\n+// \n err := v\n@@ -2234,24 +2234,27 @@\n  v.Pop()%0A%09%09%09\n+// \n if err != ni\n@@ -2252,32 +2252,35 @@\n err != nil %7B%0A%09%09%09\n+// \n %09fmt.Println(err\n@@ -2280,24 +2280,27 @@\n tln(err)%0A%09%09%09\n+// \n %7D%0A%09%09case %22cl\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-06-10_23-25-38",
+            "content": "package main\n\n//parte boa de estar atrasado \u00e9 que vi esse conte\u00fado junto com SO, ent\u00e3o to sabendo do que \u00e9 uma pilha\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Stack[T any] struct {\n\tdata []T\n}\n\n// Fun\u00e7\u00e3o top de criar novo Stack\nfunc NewStack[T any](cap int) *Stack[T] { // pilhas guardam qualquer tipo de dado\n\treturn &Stack[T]{data: make([]T, 0, cap)} //tamanho 0, capacidade cap\n}\n\nfunc (s *Stack[T]) String() string {\n\toutput := \"\"\n\tfor i := range cap(s.data) {\n\t\tif i != 0 {\n\t\t\toutput += \", \"\n\t\t}\n\t\tif i < len(s.data) {\n\t\t\toutput += fmt.Sprintf(\"%v\", s.data[i])\n\t\t} else {\n\t\t\toutput += \"_\"\n\t\t}\n\t}\n\treturn output\n}\n\n// fun\u00e7\u00e3o de Push\nfunc (s *Stack[T]) Push(value T) {\n\ts.data = append(s.data, value) //gra\u00e7as a deus t\u00e1 facil\n} //deu bom\n// Fun\u00e7\u00e3o de Size pq acho que vai ser simples tbm\nfunc (s *Stack[T]) Size() int {\n\treturn len(s.data) //acho que \u00e9 s\u00f3 isso msm\n}\n\n// Fn\u00e7\u00e3o de Clear\nfunc (s *Stack[T]) Clear() {\n\ts.data = s.data[:0] //come\u00e7ando do 0 e terminando do 0 mesmo, botei antes 0: mas vi q ai n fazia muito sentido\n} //tem q ter no m\u00e1ximo o 0\n\n// Fun\u00e7\u00e3o Top, s\u00f3 retornar o \u00faltimo\nfunc (s *Stack[T]) Peek() (T, error) {\n\tif len(s.data) == 0 {\n\t\tvar zero T                                // na quest\u00e3o anterior, de encadeada, tive que fazer isso tbm pois tipo gen\u00e9rico \u00e9 foda, GO n\u00e3o retorna nil pra tipos gen\u00e9ricos\n\t\treturn zero, fmt.Errorf(\"stack is empty\") //se tiver vazio\n\t}\n\treturn s.data[len(s.data)-1], nil // aquela conta estranha \u00e9 pra retornar o \u00faltimo\n}\n\nfunc (s *Stack[T]) Pop() error { // aqui \u00e9 s\u00f3 pra remover\n\tif len(s.data) == 0 {\n\t\treturn fmt.Errorf(\"stack is empty\")\n\t}\n\ts.data = s.data[:len(s.data)-1] //s\u00f3 quero ver os valores at\u00e9 o pen\u00faltimo\n\treturn nil\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewStack[int](10)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tcap, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewStack[int](cap)\n\t\tcase \"push\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Push(value)\n\t\t\t}\n\t\tcase \"debug\":\n\t\t\tfmt.Println(v)\n\t\tcase \"top\":\n\t\t\ttop, err := v.Peek()\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t} else {\n\t\t\t\tfmt.Println(top)\n\t\t\t}\n\t\tcase \"size\":\n\t\t\tfmt.Println(v.Size())\n\t\tcase \"pop\":\n\t\t\terr := v.Pop()\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t}\n\t\tcase \"clear\":\n\t\t\tv.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "118"
+        }
+    ]
+}
