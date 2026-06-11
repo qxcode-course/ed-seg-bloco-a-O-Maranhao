@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_09-19-04",
+            "content": "@@ -204,11 +204,9 @@\n une(\n-'A'\n+A\n  + i\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-06-11_09-19-17",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n//Hoje vamos trabalhar com loops eu acho\n\nfunc main() {\n\tq := NewQueue[string]() //q de queue, ou fila em franc\u00eas/english\n\n\tfor i := 0; i < 16; i++ {\n\t\tq.Enqueue(string(rune('A' + i))) // esse rune/char aqui \u00e9 uma loucura: soma os valores da tabela ASCII e o String converte esses valores em string, ent\u00e3o eu to somando o valor de A com o valor de i\n\t} //e assim vou preenchendo rapidin\n\n\tfor q.items.Len() > 1 {\n\t\ttimeA := q.Dequeue() //remove o time A, primeiro elemento da fila\n\t\ttimeB := q.Dequeue() //remove o time B, q agr \u00e9 o primeiro elemento da fila\n\n\t\tvar gA, gB int //gols de A e gols de B\n\t\tfmt.Scan(&gA, &gB)\n\t\tif gA > gB { //se o time A fizer mais gol\n\t\t\tq.Enqueue(timeA) //time A volta pra fila\n\t\t} else {\n\t\t\tq.Enqueue(timeB) //empate ou vit\u00f3ria de B\n\t\t}\n\t}\n\n\t//vamo imprimir o vencedor, que foi quem sobrou\n\tfmt.Println(q.Dequeue())\n}\n",
+            "lines": "31"
+        }
+    ]
+}
